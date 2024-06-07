@@ -69,65 +69,78 @@ img {
         width: 817px;
         height: 679px;
         background-color: #909959;
-        color: #000000;;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif; 
-}
+            color: #000000;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .intro h2 {
+            font-size: 30px;
+            padding: 20px;
+        }
+        
+        /*  photo  */
+        
+        .photo {
+            display: flex;
+        }
+        
+        .image2 {
+            width: 500px;
+            height: 299px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        
+        .image3 {
+            width: 500px;
+            height: 299px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        
+        .image4 {
+            width: 500px;
+            height: 299px;
+            margin-top: 10px;
+        }
+        
+        .image5 {
+            padding-top: 10px;
+            width: 755px;
+            height: 450px;
+            margin-right: 10px;
+        }
+        
+        .image6 {
+            padding-top: 10px;
+            width: 755px;
+            height: 450px;
+        }
 
-.intro h2 {
-    font-size: 30px;
-    padding: 20px;
-}
+        /*  avis  */
 
-/*  photo  */
-
-.photo {
-    display: flex;
-}
-
-.image2 {
-    width: 500px;
-    height: 299px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.image3 {
-    width: 500px;
-    height: 299px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.image4 {
-    width: 500px;
-    height: 299px;
-    margin-top: 10px;
-}
-
-.image5 {
-    padding-top: 10px;
-    width: 755px;
-    height: 450px;
-    margin-right: 10px;
-}
-
-.image6 {
-    padding-top: 10px;
-    width: 755px;
-    height: 450px;
-}
-
-/*  pied-de-page  */
-
-.footer {
-    background-color: #C28165;
-    color: #000000;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    justify-content: center;
-}
-
+        .avis {
+            float: right;
+            width: 755px;
+            height: 450px;
+            background-color: #E4D2A1;
+            color: #000000;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            }
+        
+        /*  pied-de-page  */
+        
+        .footer {
+            background-color: #C28165;
+            color: #000000;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            justify-content: center;
+        }
+        
+        
 
 
 
