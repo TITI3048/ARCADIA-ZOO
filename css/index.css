@@ -121,28 +121,34 @@ img {
         /*  avis et horaire  */
 
         .avis {
-            float: right;
+            float: left;
             width: 755px;
-            height: 550px;
+            height: 650px;
             background-color: #E4D2A1;
             color: #000000;
-            text-align: center;
             font-family: 'Montserrat', sans-serif;
+            justify-content: center;
+            align-items: center;
             }
 
         .avis h2 {
             text-align: center;
             font-size: 30px;
             padding: 20px;
-            
         }
 
         .etoile1{
         width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
             }
 
         .etoile2{
             width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /*  horaire  */
