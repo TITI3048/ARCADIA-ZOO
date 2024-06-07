@@ -118,7 +118,7 @@ img {
             height: 450px;
         }
 
-        /*  avis  */
+        /*  avis et horaire  */
 
         .avis {
             float: right;
@@ -130,22 +130,46 @@ img {
             font-family: 'Montserrat', sans-serif;
             }
 
+        .avis h2 {
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+            
+        }
+
         .etoile1{
         width: 150px;
             }
 
-        .etoile2 {
+        .etoile2{
             width: 150px;
         }
-        
-        /*  pied-de-page  */
-        
-        .footer {
-            background-color: #C28165;
+
+        /*  horaire  */
+
+        .horaire {
+            float: left;
+            width: 755px;
+            height: 550px;
             color: #000000;
-            font-size: 20px;
+            text-align: center;
             font-family: 'Montserrat', sans-serif;
-            justify-content: center;
+            padding-top: 60px
+            }
+
+        .p1 {
+            font-size: 20px;
+            padding-top: 50px;
+        }
+
+        .p2 {
+            font-size: 20px;
+            padding-top: 50px;
+        }
+
+        .mail {
+            font-size: 20px;
+            padding-top: 50px;
         }
         
         
