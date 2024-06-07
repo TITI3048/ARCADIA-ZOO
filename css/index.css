@@ -123,12 +123,20 @@ img {
         .avis {
             float: right;
             width: 755px;
-            height: 450px;
+            height: 550px;
             background-color: #E4D2A1;
             color: #000000;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
             }
+
+        .etoile1{
+        width: 150px;
+            }
+
+        .etoile2 {
+            width: 150px;
+        }
         
         /*  pied-de-page  */
         
