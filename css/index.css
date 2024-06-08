@@ -131,6 +131,7 @@ img {
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 
 .avis h2 {
@@ -187,6 +188,24 @@ img {
     align-items: center;
     padding-left: 80px;
 }
+
+/*  pied de page  */
+
+
+.footer {
+    background-color: #C28165;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    margin-top: 20px;
+}
+
+
+
+
         
         
 
