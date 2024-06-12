@@ -7,6 +7,7 @@ body {
 h1 {
     display: flex;
     padding: 20px;
+    font-family: 'Consolas', sans-serif;
 }
 
 header {
@@ -44,20 +45,127 @@ header {
 /* debut de mon main*/
 
 .intro {
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #BCC678;
-    width: 800px;
+    width: 900px;
     height: 600px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
+.prsentation {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.image1 {
+    width: 900px;
+    height: 600px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.photo2 {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.image2 {
+    width: 600px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.image3 {
+    width: 1000px;
+    height: 400px;
+
+
+}
+
+.image4 {
+    width: 1000px;
+    height: 400px;
+    margin-left: 20px;
+}
+
 h2 {
     color: #000000;
+    font-family: 'Consolas', sans-serif;
     font-size: 30px;
     padding-bottom: 20px;
     padding-top: 20px;
 }
 
+.A {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+h3 {
+    color: #000000;
+    font-family: 'Consolas', sans-serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.button {
+    margin-bottom: 10px;
+
+}
+
+
+.horaire {
+    background-color: #C0E4FF;
+    width: 900px;
+    padding-top: 200px;
+    list-style: none;
+}
+
+.avis {
+    background-color: #e4d2a1;
+    width: 900px;
+}
+
+.etoile {
+    width: 100px;
+}
 
 /*fin de mon main*/
 
+/*debut de mon footer*/
+
+footer {
+    height: 100px;
+    background-color: #C28165;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    padding-right: 160px;
+}
+
+/* fin de mon footer*/
