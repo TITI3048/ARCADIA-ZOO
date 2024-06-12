@@ -1,24 +1,14 @@
 body {
     background-color: #ffffff;
-
 }
 
-/* bienvenue */
+/* debut de mon header*/
 
 h1 {
     background-color: #C28165;
     display: flex;
     justify-content: center;
     padding: 20px;
-    ;
-
-}
-
-.bienvenue {
-    background-color: #C28165;
-    color: #000000;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .menu {
@@ -32,16 +22,15 @@ h1 {
     align-items: center;
 }
 
-img {
-    width: 200px;
-    height: 124px;
-    float: left;
+.image {
+    width: 250px;
+    height: 155px;
+    float: right;
 }
 
 .menu ul {
     display: flex;
     list-style: none;
-    ;
 }
 
 .menu li a {
@@ -52,175 +41,25 @@ img {
     padding: 30px;
 }
 
-/*  présentation */
+/* fin de mon header*/
 
-
-.présentation {
-    display: flex;
-    padding-top: 10px;
-}
-
-.image1 {
-    width: 723px;
-    height: 679px;
-    padding-left: 10px;
-
-}
+/* debut de mon main*/
 
 .intro {
-    width: 817px;
-    height: 679px;
-    background-color: #909959;
-    color: #000000;
+    background-color: #BCC678;
+    width: 800px;
+    height: 600px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
-.intro h2 {
+h2 {
+    color: #000000;
     font-size: 30px;
-    padding: 20px;
-}
-
-/*  photo  */
-
-.photo {
-    display: flex;
-}
-
-.image2 {
-    width: 500px;
-    height: 299px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.image3 {
-    width: 500px;
-    height: 299px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.image4 {
-    width: 500px;
-    height: 299px;
-    margin-top: 10px;
-}
-
-.image5 {
-    padding-top: 10px;
-    width: 755px;
-    height: 450px;
-    margin-right: 10px;
-}
-
-.image6 {
-    padding-top: 10px;
-    width: 755px;
-    height: 450px;
-}
-
-/*  avis et horaire  */
-
-.avis {
-    float: left;
-    width: 755px;
-    height: 650px;
-    background-color: #E4D2A1;
-    color: #000000;
-    font-family: 'Montserrat', sans-serif;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.avis h2 {
-    text-align: center;
-    font-size: 30px;
-    padding: 20px;
-}
-
-.etoile1 {
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 300px;
-}
-
-.etoile2 {
-    width:300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 150px;
-}
-
-/*  horaire  */
-
-.horaire {
-    float: left;
-    width: 755px;
-    height: 550px;
-    color: #000000;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 60px
-}
-
-.p1 {
-    font-size: 20px;
-    padding-top: 50px;
-}
-
-.p2 {
-    font-size: 20px;
-    padding-top: 50px;
-}
-
-.image7 {
-    width: 600px;
-    height: 345px;
-    margin-top: 10px;
-    margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 80px;
-}
-
-/*  pied de page  */
-
-
-.footer {
-    background-color: #C28165;
-    color: #000000;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px;
-    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 
-
-
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*fin de mon main*/
 
