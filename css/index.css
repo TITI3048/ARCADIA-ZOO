@@ -209,6 +209,12 @@ footer {
         padding: 10px;
     }
 
+    .prsentation {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
     .intro {
         width: 100%;
         height: 100%;
