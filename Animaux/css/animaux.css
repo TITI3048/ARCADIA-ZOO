@@ -43,6 +43,24 @@ header {
 
 /* fin de mon header*/
 
+/* debut de mon main*/
+
+.animation {
+    display: flex;
+}
+
+#carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.jungle-animal {
+    
+}
+
+/* fin de mon main*/
+
 /*debut de mon footer*/
 
 
