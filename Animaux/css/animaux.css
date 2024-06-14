@@ -45,10 +45,6 @@ header {
 
 /* debut de mon main*/
 
-.animation {
-    display: flex;
-}
-
 #carousel {
     display: flex;
     flex-wrap: wrap;
