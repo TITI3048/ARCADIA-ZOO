@@ -14,9 +14,10 @@ form {
     min-width: 300px;
     border: solid 3px #000;
 }
+
 form h1 {
     text-align: center;
-    color: ;
+    color: #eb7371;
     font-size: 40px;
 }
 
@@ -31,21 +32,29 @@ form .inputs {
     flex-direction: column;
 }
 
-form .inputs input[types="email"], input[types="password"]{
+form .inputs input[types="email"],
+input[types="password"] {
     padding: 20px;
     border-radius: 10px;
-    border:none;
+    border: none;
     background-color: #f2f2f2;
     margin-bottom: 15px;
     outline: none;
 }
 
-form .inputs input[types="submit"] {
-    padding: 20px;
-    border-radius: 10px;
-    border:none;
-    
+.button {
+    padding: 15px 25px;
+    text-align: center;
 }
 
+form .clic {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #eb7371;
+    cursor: pointer;
+}
 
 
