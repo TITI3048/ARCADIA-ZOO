@@ -159,9 +159,9 @@ h3 {
     background-color: #e4d2a1;
     width: 750px;
     height: 400px;
-    -webkit-border-radius:150px /100px;
-    -moz-border-radius:150px /100px;
-    -o-border-radius:150px /100px;
+    -webkit-border-radius: 150px /100px;
+    -moz-border-radius: 150px /100px;
+    -o-border-radius: 150px /100px;
     border-radius: 150px /100px;
     padding-top: 100px;
     margin-top: 90px;
@@ -238,8 +238,9 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
     }
+
     .photo .photo2 {
         flex-direction: column;
         align-items: center;
@@ -321,8 +322,9 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
     }
+
     .photo .photo2 {
         display: flex;
         flex-direction: column;
