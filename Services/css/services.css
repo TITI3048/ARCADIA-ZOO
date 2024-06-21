@@ -94,7 +94,7 @@ nav >ul > li:hover >a {
 }
 
 .sous-menu >li:hover {
-    background-color: rgba(23, 189, 245, 0.884);
+    background-color: #C28165;
 }
 
 .sous-menu > li:hover > a {
@@ -137,6 +137,7 @@ nav >ul > li:hover >a {
 
 
 /*debut de mon main*/
+
 
 main {
     padding-top: 20px;

@@ -1,53 +1,145 @@
-body {
-    background-color: #ffffff;
+.zoo {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    background-color: #C28165;
 }
 
-/* debut de mon header*/
-
 h1 {
-    display: flex;
-    padding: 20px;
+    font-size: 50px;
+    padding-top: 40px;
     font-family: 'Consolas', sans-serif;
 }
 
-header {
-    width: 1520px;
-    background-color: #C28165;
-    color: #000000;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 .image {
-    width: 250px;
-    height: 155px;
-    float: right;
+    width: 300px;
+    height: 213px;
+    float: left;
 }
 
-.menu ul {
+:root {
+    --hauteur-menu: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+}
+
+nav > ul {
     display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
+    height: var(--hauteur-menu);
+}
+
+nav ul {
     list-style: none;
 }
 
-.menu li a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    padding: 30px;
+nav > ul > li {
+    background-color: white;
+    position: relative;
+    height: 100%;
+    flex: 1;
 }
 
-/* fin de mon header*/
+nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-deroulant > a::after{
+    content: ">";
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.sous-menu > li >a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+nav >ul > li:hover >a {
+    color: #C28165;
+}
+
+.sous-menu >li:hover {
+    background-color: #C28165;
+}
+
+.sous-menu > li:hover > a {
+    color: white;
+}
+
+@keyframes rotationfleche {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+    
+}
+
+.menu-deroulant:hover > a:after {
+    animation: rotationfleche 0.2s linear forwards;
+}
+
+@keyframes apparitionSousMenu {
+    0% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
+        border-top: 3px solid #C28165;
+    }
+    30% {
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        max-height: 50em;
+        border-top: 3px solid #C28165;
+        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+}
+
 
 /* debut de mon main*/
 
 .jungle {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
     background-color: #BCC678;
     width: 100%;
@@ -59,11 +151,24 @@ header {
 }
 
 h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: 'Consolas';
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+h4 {
     font-size: 30px;
     font-weight: bold;
     color: #000000;
     text-align: center;
     font-family: 'Consolas';
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 main{
@@ -96,21 +201,6 @@ main{
     top: 0;
 }
 
-h3{
-    font-size: 30px;
-    font-weight: bold;
-    color:#000000 ;
-    text-align: center;
-    font-family: 'Consolas';
-}
-
-h4 {
-    font-size: 30px;
-    font-weight: bold;
-    color:#000000 ;
-    text-align: center;
-    font-family: 'Consolas';
-}
 
 .item img {
     width: 450px;
