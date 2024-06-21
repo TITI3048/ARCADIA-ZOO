@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia Zoo</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="accueil.css">
+
 </head>
 
 <body>
-
-    <header class="menu">
+    <div class="zoo">
         <img src="image/icon lion.jpeg" class="image" alt="lion">
         <h1>Arcadia Zoo</h1>
+    </div>
+    <header class="menu">
         <nav>
             <ul>
                 <li><a href="/Services/services.html">Service</a></li>
-                <li><a href="/Habitats/habitats.html">Habitas</a></li>
-                <li><a href="/Animaux/animaux.html">Animaux</a></li>
+                <li class="menu-deroulant">
+                    <a href="/Habitats/habitats.html">Habitas</a>
+                    <ul class="sous-menu">
+                        <li><a href="/jungle/jungle.html">La Jungle</a></li>
+                        <li><a href="/reptile/reptile.html">Les Réptiles</a></li>
+                        <li><a href="/reserve africaine/reserve-africaine.html">La Réserve Africaine</a></li>
+                        <li><a href="/voliere/voliere.html">La Voliére</a></li>
+                    </ul>
+                </li>
                 <li><a href="/connexion/connexion.html">Connexion</a></li>
             </ul>
         </nav>
@@ -136,6 +144,9 @@
         <img src="image/icon-whatsapp.jpg" class="logo" alt="whatsapp">
     </footer>
 
+</body>
+
+</html>
 </body>
 
 </html>

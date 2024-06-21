@@ -135,12 +135,151 @@ nav >ul > li:hover >a {
     animation: apparitionSousMenu 1s forwards;
 }
 
+/* debut de mon main*/
+
+.intro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #BCC678;
+    width: 750px;
+    height: 600px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: 3px solid #535252;
+}
+
+.prsentation {
+    display: flex;
+    flex-direction: column;
+}
+
+.image1 {
+    width: 750px;
+    height: 604px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo1 {
+    display: flex;
+    animation-duration: 50s;
+    animation-name: mesimages;
+    animation-iteration-count: infinite;
+
+}
+
+#caroussel {
+    width: 1000px;
+    overflow: hidden;
+    border: solid 3px black;
+}
+
+@keyframes mesimages {
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-1000px);
+    }
+
+    20% {
+        transform: translateX(-2000px);
+    }
+
+    30% {
+        transform: translateX(-3000px);
+    }
+
+    40% {
+        transform: translateX(-4000px);
+    }
+
+    50% {
+        transform: translateX(-5000px);
+    }
+
+    60% {
+        transform: translateX(-6000px);
+    }
+
+    70% {
+        transform: translateX(0);
+    }
+}
+
+h2 {
+    color: #000000;
+    font-family: 'Consolas', sans-serif;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.A {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+h3 {
+    color: #000000;
+    font-family: 'Consolas', sans-serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.button {
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+
+
+.horaire {
+    background-color: #e4d2a1;
+    width: 750px;
+    height: 400px;
+    -webkit-border-radius: 150px /100px;
+    -moz-border-radius: 150px /100px;
+    -o-border-radius: 150px /100px;
+    border-radius: 150px /100px;
+    padding-top: 100px;
+    margin-top: 90px;
+    list-style: none;
+    border: 3px solid #535252;
+}
+
+.avis {
+    background-color: #e4d2a1;
+    width: 750px;
+    padding-bottom: 20px;
+    border: 3px solid #535252;
+}
+
+.etoile {
+    width: 100px;
+}
+
+/*fin de mon main*/
+
 /*debut de mon footer*/
 
 
 
 footer {
-    width: 100%;
+    width: 1520px;
     height: 80px;
     background-color: #C28165;
     color: #000000;
