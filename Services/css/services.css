@@ -135,9 +135,15 @@ nav >ul > li:hover >a {
     animation: apparitionSousMenu 1s forwards;
 }
 
+
+/*debut de mon main*/
+
+main {
+    padding-top: 20px;
+}
+
+/*fin de mon main*/
 /*debut de mon footer*/
-
-
 
 footer {
     width: 100%;
