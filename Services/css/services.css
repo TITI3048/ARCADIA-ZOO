@@ -146,6 +146,7 @@ nav >ul > li:hover >a {
     padding-top: 20px;
     align-items: center;
     background: #e4d2a1;
+    border-radius: 10px;
 }
 
 .resto1 img {
@@ -230,6 +231,7 @@ h3 {
     background-color: #e4d2a1;
     border: solid 3px #000000;
     margin: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
 
 
