@@ -56,5 +56,18 @@ form .clic {
     background-color: #eb7371;
     cursor: pointer;
 }
+.link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.lien {
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 40px;
+}
 
 
