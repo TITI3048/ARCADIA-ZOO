@@ -240,20 +240,30 @@ h4 {
     border-radius: 10px;
 }
 
+.visite-guide {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px 10px 10px;
+
+}
+
 .visite {
     border: solid 3px #000000;
     width: 600px;
     height: 400px;
     background-color: #e4d2a1;
-    margin-left: 10px;
+    margin-left: 100px;
     text-align: center;
 }
 
-.guide img {
-    width: 700px;
+.guide {
+    width: 600px;
     height: 400px;
     display: flex;
     flex-direction: column;
+    float: right;
+    margin-left: 100px;
+    border-radius: 10px;
 }
 
 
