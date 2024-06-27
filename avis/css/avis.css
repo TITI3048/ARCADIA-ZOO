@@ -1,0 +1,50 @@
+.avis {
+    padding: 20px;
+    width: 500px;
+    height: 300px;
+    background-color: #C28165;
+    border: solid 3px #000000;
+}
+
+.nom {
+    font-size: 20px;
+    font-family: 'Consolas', sans-serif;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.text{
+    font-size: 20px;
+    font-family: 'Consolas', sans-serif;
+    color: #000000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+#commentaire {
+    width: 250px;
+    height: 100px;
+}
+
+.stars {
+    text-align: center;
+    font-size: 25px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-left: 215px;
+    font-size: 20px;
+}
+
+.lien {
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 40px;
+}
