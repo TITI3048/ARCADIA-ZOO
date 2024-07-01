@@ -251,13 +251,15 @@ h3 {
     background-color: #e4d2a1;
     width: 750px;
     height: 450px;
-    -webkit-border-radius: 150px /100px;
-    -moz-border-radius: 150px /100px;
-    -o-border-radius: 150px /100px;
-    border-radius: 150px /100px;
+    border-radius: 150px;
     padding-top: 100px;
     list-style: none;
     border: 3px solid #535252;
+}
+.contact {
+    font-size: 25px;
+    font-family: 'Consolas', sans-serif;
+    margin-bottom: 20px;
 }
 
 .p1 {
