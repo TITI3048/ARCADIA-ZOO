@@ -216,11 +216,13 @@ main{
     margin-top: 0;
 }
 #next{
+    cursor: pointer;
     position: absolute;
     right: 50px;
     top: 40%;
 }
 #prev{
+    cursor: pointer;
     position: absolute;
     left: 50px;
     top: 40%;
@@ -245,6 +247,10 @@ main{
     height: 100px;
     background-image: url(https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png);
     position: absolute;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 92%;
+    top: 98%;
 }
 
 .anim-like {
