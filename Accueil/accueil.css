@@ -1,7 +1,7 @@
 body {
     height: 100vh;
-    --primary: hsl(68, 97%, 63%);
-    --secondary: hsl(180, 97%, 54%);
+    --primary: hsl(56, 93%, 77%);
+    --secondary: hsl(86, 93%, 73%);
     background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 

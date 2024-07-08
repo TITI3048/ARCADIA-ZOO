@@ -241,6 +241,7 @@ main{
 #next:hover{
     opacity: 1;
 }
+
 .like {
     cursor: pointer;
     width: 100px;
