@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    --primary: hsl(57, 90%, 81%);
+    --primary: hsl(58, 86%, 89%);
     --secondary: hsl(86, 93%, 73%);
     background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
@@ -361,3 +361,4 @@ footer {
 }
 
 /*fin de mon footer*/
+
