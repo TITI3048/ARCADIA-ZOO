@@ -187,15 +187,6 @@ main {
     font-family: 'Montserrat';
     padding-bottom: 50px;
 }
-/*
-.slider {
-    position: relative;
-    margin-top: 100px;
-    width: 100%;
-    height: 750px;
-    overflow: hidden;
-}
-*/
 
 #board {
     display: grid;
