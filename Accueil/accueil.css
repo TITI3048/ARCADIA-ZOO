@@ -12,9 +12,37 @@ body {
     background-color: #C28165;
 }
 
-h1 {
-    font-size: 50px;
-    padding-top: 40px;
+.marquee-rtl {
+    max-width: 90em;
+    padding-top: 25px;
+    margin: 0 auto;
+    border: 10px solid #f0f0ff;
+    overflow: hidden;
+    box-shadow: 0 .25em .5em #ccc, inset 0 0 .1em .25em #ccc;
+}
+
+.marquee-rtl > :first-child {
+    display: inline-block;
+    padding-right: 2em;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation-name: defilement-rtl;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes defilement-rtl {
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-100%,0,0);
+    }
+}
+
+.h1 {
+    font-size: 90px;
     font-family: 'Consolas', sans-serif;
 }
 
