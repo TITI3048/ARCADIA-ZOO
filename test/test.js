@@ -15,6 +15,6 @@ like.addEventListener('click', () => {
 
 });
 
-like.addEventListener('animationend', () => {
-    like.classList.toggle('anim-like');
-})
+like.addEventListener('animationend', function () {
+        like.classList.toggle('anim-like');
+    })

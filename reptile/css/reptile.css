@@ -134,7 +134,6 @@ nav >ul > li:hover >a {
 .menu-deroulant:hover > .sous-menu {
     animation: apparitionSousMenu 1s forwards;
 }
-
 /* debut de mon main*/
 
 .reptile {
@@ -142,49 +141,11 @@ nav >ul > li:hover >a {
     margin-bottom: 20px;
     background-color: #BCC678;
     width: 100%;
-    height: 500px;
+    height: 600px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     border: 3px solid #535252;
-}
-
-h2 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #000000;
-    text-align: center;
-    font-family: 'Consolas';
-}
-
-main{
-    background-image: linear-gradient(to top right, #bbc678, #6b780a52);
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat';
-    padding-bottom: 50px;
-}
-.slider{
-    position: relative;
-    margin-top: 100px;
-    width: 100%;
-    height: 750px;
-    overflow: hidden;
-}
-.item{
-    position: absolute;
-    width: 450px;
-    height: 700px;
-    text-align: justify;
-    background-color: #e4d2a1;
-    border-radius: 10px;
-    padding: 20px;
-    transition:  0.5s;
-    left: calc(50% - 110px);
-    top: 0;
 }
 
 h2 {
@@ -193,8 +154,8 @@ h2 {
     color: #000000;
     text-align: center;
     font-family: 'Consolas';
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 h4 {
@@ -203,55 +164,137 @@ h4 {
     color: #000000;
     text-align: center;
     font-family: 'Consolas';
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-h3{
-    font-size: 30px;
-    font-weight: bold;
-    color:#000000 ;
+h3 {
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+main {
+    background-image: linear-gradient(to right, #f9fbb5, #34ae71b8);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    padding-bottom: 50px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
     text-align: center;
-    font-family: 'Consolas';
 }
 
-.item img {
+.container {
+    width: 450px;
+    height: 700px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container:hover .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 700px;
+    width: 450px;
+    position: relative;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.card .image {
     width: 450px;
     height: 400px;
     border-radius: 25px;
     margin-top: 80px;
 }
 
-.item .image1 {
+.card .image1 {
+    width: 300;
+    height: 250px;
+    border-radius: 25px;
+    
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(24, 24, 24, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: #BCC678;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+
+.card .container{
+    position: absolute;
+    width: 450px;
+    height: 700px;
+    border-radius: 10px;
+    padding: 20px;
+    transition:  0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+
+
+.card img {
+    width: 450px;
+    height: 400px;
+    border-radius: 25px;
+    margin-top: 80px;
+}
+
+.card .image1 {
     width: 300;
     height: 200px;
     border-radius: 25px;
     margin-top: 0;
 }
-#next{
+
+.like {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    background-image: url(https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png);
     position: absolute;
-    right: 50px;
-    top: 40%;
+    top: 100%;
+    left: 92%;
+    transform: translate(-50%, -50%);
 }
-#prev{
-    position: absolute;
-    left: 50px;
-    top: 40%;
+
+.anim-like {
+    animation-name: anim-like;
+    animation-duration: 0.8s;
+    animation-timing-function: steps(28);
 }
-#prev, #next{
-    color: #000000;
-    background: none;
-    border: none;
-    font-size: xxx-large;
-    font-family: monospace;
-    font-weight: bold;
-    opacity: 0.5;
-    transition: opacity 0.5s;
-}
-#prev:hover,
-#next:hover{
-    opacity: 1;
+
+@keyframes anim-like {
+    from{background-position: left;}
+    to{background-position: right;}
 }
 
 /* fin de mon main*/
