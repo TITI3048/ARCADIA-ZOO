@@ -13,7 +13,7 @@ body {
 }
 
 .marquee-rtl {
-    max-width: 90em;
+    max-width: 100%;
     padding-top: 25px;
     margin: 0 auto;
     border: 10px solid #f0f0ff;
