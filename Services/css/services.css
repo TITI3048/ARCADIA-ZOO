@@ -224,12 +224,12 @@ h4 {
 }
 
 .train{
-    width: 1200px;
+    width: 1000px;
     height: 650px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 150px;
+    border-radius: 300px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -276,6 +276,7 @@ h4 {
 }
 
 .visite {
+    border-radius: 10px;
     border: solid 3px #000000;
     width: 600px;
     height: 400px;
