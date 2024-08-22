@@ -1,4 +1,10 @@
-<?php ?>
+<?php
+if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
+
+}else{
+    echo "Veuillez remplir tous les champs...";
+}
+?>
 
 
 <!DOCTYPE html>
