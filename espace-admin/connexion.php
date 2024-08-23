@@ -1,5 +1,5 @@
 <?php
-'session_satrt'();
+session_start();
 if(isset($_POST['valider'])){
     if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
         $_pseudo_par_defaut ="admin";
@@ -9,9 +9,8 @@ if(isset($_POST['valider'])){
         $mdp_saisi = htmlspecialchars($_POST['mdp']);
 
         if($pseudo_saisi == $pseudo_par_defaut AND $mdp_saisi ==$mdp_par_defaut){
-            $_SESSION['pseudo'] = $pseudo_saisi;
             $_SESSION['mdp'] = $mdp_saisi;
-            header('Location:index.php');
+            header('Location: index.php');
         }else{
             echo"votre pseudo ou votre mot de passe et incorrect...";
         }
