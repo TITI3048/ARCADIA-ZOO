@@ -1,22 +1,20 @@
 <?php
-session_start();
+'session_satrt'();
 if(isset($_POST['valider'])){
     if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
-        $pseudo = "admin";
-        $mdp = "admin1234";
+        $_pseudo_par_defaut ="admin";
+        $_mdp_par_defaut = "admin1234";
 
         $pseudo_saisi = htmlspecialchars($_POST['pseudo']);
         $mdp_saisi = htmlspecialchars($_POST['mdp']);
 
-        if($pseudo_saisi == $pseudo AND $mdp_saisi == $mdp){
+        if($pseudo_saisi == $pseudo_par_defaut AND $mdp_saisi ==$mdp_par_defaut){
+            $_SESSION['pseudo'] = $pseudo_saisi;
             $_SESSION['mdp'] = $mdp_saisi;
-        header('location:index.php');
+            header('Location:INDEX.php');
         }else{
-            echo "Pseudo ou mot de passe incorrect...";
-            
-        }  
-    }else{
-            echo "Veuillez remplir tous les champs...";
+            echo"votre pseudo ou votre mot de passe et incorrect";
+        }
     }
 }
 ?>
