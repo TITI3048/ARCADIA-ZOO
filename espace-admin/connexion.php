@@ -11,12 +11,15 @@ if(isset($_POST['valider'])){
         if($pseudo_saisi == $pseudo_par_defaut AND $mdp_saisi ==$mdp_par_defaut){
             $_SESSION['pseudo'] = $pseudo_saisi;
             $_SESSION['mdp'] = $mdp_saisi;
-            header('Location:INDEX.php');
+            header('Location:index.php');
         }else{
-            echo"votre pseudo ou votre mot de passe et incorrect";
+            echo"votre pseudo ou votre mot de passe et incorrect...";
+        }
+        }else{
+            echo"veuillez remplir tous les champs...";
         }
     }
-}
+
 ?>
 
 
