@@ -40,6 +40,11 @@ input[types="password"] {
     background-color: #f2f2f2;
     margin-bottom: 15px;
     outline: none;
+    text-align: center;
+}
+
+.inputs {
+    text-align: center;
 }
 
 .button {
