@@ -2,14 +2,9 @@
 @import '/habitats/css/habitats.css';
 @import '/jungle/css/jungle.css';
 @import '/reptile/css/reptile.css';
-@import '/reserve\ africaine/.css';
+@import '/reserve africaine/css/reserve-africaine.css';
 @import '/services/css/services.css';
 @import '/voliere/css/voliere.css';
+@import '/avis/css/avis.css'
 
 
-
-@media screen and (max-width: 800px) {
-    .menu {
-        display: none;
-    }
-}
