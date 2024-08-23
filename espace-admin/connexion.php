@@ -1,8 +1,23 @@
 <?php
-if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
+session_start();
+if(isset($_POST['valider'])){
+    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
+        $pseudo = "admin";
+        $mdp = "admin1234";
 
-}else{
-    echo "Veuillez remplir tous les champs...";
+        $pseudo_saisi = htmlspecialchars($_POST['pseudo']);
+        $mdp_saisi = htmlspecialchars($_POST['mdp']);
+
+        if($pseudo_saisi == $pseudo AND $mdp_saisi == $mdp){
+            $_SESSION['mdp'] = $mdp_saisi;
+        header('location:index.php');
+        }else{
+            echo "Pseudo ou mot de passe incorrect...";
+            
+        }  
+    }else{
+            echo "Veuillez remplir tous les champs...";
+    }
 }
 ?>
 
