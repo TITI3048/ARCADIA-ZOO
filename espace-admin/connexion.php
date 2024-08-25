@@ -10,7 +10,7 @@ if(isset($_POST['valider'])){
 
         if($pseudo_saisi == $pseudo_par_defaut AND $mdp_saisi ==$mdp_par_defaut){
             $_SESSION['mdp'] = $mdp_saisi;
-            header('Location: /espace-admin/index.php');
+            header('Location: index.php');
         }else{
             echo"votre pseudo ou votre mot de passe et incorrect...";
         }
@@ -18,9 +18,7 @@ if(isset($_POST['valider'])){
             echo"veuillez remplir tous les champs...";
         }
     }
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +34,7 @@ if(isset($_POST['valider'])){
         <input type="password" name="mdp">
         <br><br>
         <input type="submit" name="valider">
+        <a href="index.php">Accéder à la nouvelle page</a> <!-- Lien vers la nouvelle page -->
     </form>
 </body>
 </html>
