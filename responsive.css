@@ -8,3 +8,6 @@
 @import '/avis/css/avis.css'
 
 
+@media screen and (max-width: 600px) {
+    display: none;
+}
