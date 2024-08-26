@@ -4,23 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <p class="text">ok ok ok ok</p>
         <div class="box">
             <div class="icons">
                 <span class="like" id="likecount">0</span>
-                <i class="fa-regular fa-thumbs-up" id="likebtn"></i>
-            </div>
-            <div class="icons">
-                <span class="dislike" id="dislikecount">0</span>
-                <i class="fa-regular fa-thumbs-down" id="likebtn"></i>
+                <button> <img src="like.png" class="button" onclick="togglelike()"></button>
             </div>
         </div>
-    </div>
+    
+    <script src="test.js"></script>
 </body>
 
 </html>
