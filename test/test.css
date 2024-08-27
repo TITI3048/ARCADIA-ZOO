@@ -1,0 +1,35 @@
+
+
+
+.box .icons {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border: solid #000 3px;
+
+}
+
+.icons .like {
+    width: 30px;
+    border-right: #000 solid 2px;
+    pointer-events: none;
+    margin-right: 5px;
+}
+
+
+.button {
+    width: 30px;
+    height: 30px;
+    float: right;
+    cursor: pointer;
+}
+
+.like {
+    color: black;
+
+}
+

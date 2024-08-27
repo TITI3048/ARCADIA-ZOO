@@ -1,41 +1,39 @@
 <?php
 session_start();
-if(isset($_POST['valider'])){
-    if(!empty($_POST['pseudo']) AND !empty($_POST['mdp'])){
-        $_pseudo_par_defaut ="admin";
-        $_mdp_par_defaut = "admin1234";
+
+if (isset($_POST['valider'])) {
+    if (!empty($_POST['pseudo']) && !empty($_POST['mdp'])) {
+        $pseudo_par_defaut = "admin";
+        $mdp_par_defaut = password_hash("admin1234", PASSWORD_BCRYPT);
 
         $pseudo_saisi = htmlspecialchars($_POST['pseudo']);
         $mdp_saisi = htmlspecialchars($_POST['mdp']);
 
-        if($pseudo_saisi == $pseudo_par_defaut AND $mdp_saisi ==$mdp_par_defaut){
-            $_SESSION['mdp'] = $mdp_saisi;
-            header('Location: index.php');
-        }else{
-            echo"votre pseudo ou votre mot de passe et incorrect...";
+        if ($pseudo_saisi == $pseudo_par_defaut && password_verify($mdp_saisi, $mdp_par_defaut)) {
+            $_SESSION['connected'] = true; 
+            header('Location: admin.php');
+            exit; 
+        } else {
+            echo "Votre pseudo ou votre mot de passe est incorrect...";
         }
-        }else{
-            echo"veuillez remplir tous les champs...";
-        }
+    } else {
+        echo "Veuillez remplir tous les champs...";
     }
-
+}
 ?>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace de connexion admin</title>
 </head>
 <body>
-    <form method="POST" action="" aligne="center">
+    <form method="POST" class="admin">
         <input type="text" name="pseudo" autocomplete="off">
         <br>
         <input type="password" name="mdp">
         <br><br>
-        <input type="submit" name="valider">
+        <input type="submit" name="valider"> 
     </form>
 </body>
-</html>
