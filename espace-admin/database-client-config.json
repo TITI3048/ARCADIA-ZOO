@@ -32,7 +32,8 @@
         "usingServiceName": false
       },
       "httpAuth": {
-        "authType": "none"
+          "url": "",
+          "authType": "none"
       },
       "key": "1724749043892",
       "connectionKey": "database.connections",
@@ -40,6 +41,6 @@
       "requiredAuth": true
     }
   },
-  "nosql": null,
+  "nosql": {},
   "$schema": "http://127.0.0.1:8828/schema.json"
 }
