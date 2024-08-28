@@ -422,6 +422,7 @@ footer {
 }
 
 /*fin de mon footer*/
+
 @media (max-width:800px) {
     .menu {
         display: none;

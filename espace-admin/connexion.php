@@ -20,7 +20,13 @@ if (isset($_POST['valider'])) {
         echo "Veuillez remplir tous les champs...";
     }
 }
+
+echo '<link href="style.css" rel="stylesheet"  type="text/css">';
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
