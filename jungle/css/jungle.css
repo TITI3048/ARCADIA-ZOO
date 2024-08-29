@@ -167,7 +167,7 @@ nav >ul > li:hover >a {
 /* debut de mon main*/
 
 .jungle {
-    background-image: linear-gradient(to right, #f9fbb5, #34ae71b8);
+    background-image: linear-gradient(to bottom right, #f9fbb5, #34ae71b8);
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: auto;
@@ -201,6 +201,8 @@ h4 {
 }
 
 h3 {
+    font-size: 30px;
+    font-family: 'Consolas';
     margin-top: 0px;
     padding-bottom: 0px;
 }
@@ -269,8 +271,8 @@ main {
     backface-visibility: hidden;
 }
 
-.back {
-    background-color: #cdcdcd;
+.back {color: #fff;
+    background-color: #444343;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
