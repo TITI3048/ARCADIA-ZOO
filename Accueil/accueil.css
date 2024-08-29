@@ -230,7 +230,8 @@ nav>ul>li:hover>a {
     width: 1000px;
     height: 600px;
     perspective: 700px;
-    margin-left: 250px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 80px;
     margin-bottom: 80px;
 }
@@ -423,8 +424,54 @@ footer {
 
 /*fin de mon footer*/
 
-@media (max-width:800px) {
+@media (max-width:800px) and (min-width: 150px) {
     .menu {
         display: none;
     }
 }
+
+@media (max-width:800px) and (min-width: 150px) {
+    .marquee-rtl {
+        display: none;
+    }
+}
+
+
+@media (max-width:800px) and (min-width: 150px) {
+    .container-3d .card {
+        width: 100%;
+        height: auto;
+        position: initial;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 25px;
+    }
+}
+
+@media (max-width:800px) and (min-width: 150px) {
+    .animation .caroussel {
+        width: 100%;
+
+    }
+}
+
+@media (max-width:800px) and (min-width: 150px){
+    .horaire {
+        width: 100%;
+        height: auto;
+        position: initial;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:800px) and (min-width: 150px){
+    .avis {
+        width: 100%;
+        height: auto;
+        position: initial;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
