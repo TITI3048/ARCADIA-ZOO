@@ -167,7 +167,7 @@ nav >ul > li:hover >a {
 /* debut de mon main*/
 
 .jungle {
-    background-image: linear-gradient(to bottom right, #f9fbb5, #34ae71b8);
+    background-image: linear-gradient(60deg, #f9fbb5, #34ae71b8);
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: auto;

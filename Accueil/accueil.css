@@ -2,7 +2,7 @@ body {
     height: 100vh;
     --primary: hsl(58, 86%, 89%);
     --secondary: hsl(86, 93%, 73%);
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(70deg, var(--primary), var(--secondary));
 }
 
 .zoo {
