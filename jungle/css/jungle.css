@@ -165,30 +165,37 @@ nav >ul > li:hover >a {
 
 
 /* debut de mon main*/
-
-.texte {
-    position: absolute;
-    top: 0%;
-
+.text {
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: auto;
+margin-right: auto;
+background: linear-gradient(to left , #f9fbb5, #34ae71b8);
+width: 75%;
+height: 700px;
+text-align: center;
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+border: 3px solid #535252;
 }
 
-.content img {
-    width: 100%;
+.jungle {
+    width: 400px;
+    height: 300px;
+    float: right;
+    margin-top: 400px;
 }
+.jungle1 {
+    width: 400px;
+    height: 300px;
+    float:left;
 
-.container-1 {
-    width: 100%;
-}
-
-content {
-    width: 100%;
-    position: relative;
 }
 
 h2 {
     font-size: 40px;
     font-weight: bold;
-    color: #000000;
+    color: #000;
     text-align: center;
     font-family: 'Consolas';
     padding-top: 20px;
@@ -208,7 +215,8 @@ h4 {
 h3 {
     font-size: 30px;
     font-family: 'Consolas';
-    margin-top: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding-bottom: 0px;
 }
 
