@@ -98,6 +98,7 @@ nav>ul>li>a {
 li a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .menu-deroulant>a::after {
@@ -105,6 +106,7 @@ li a {
     font-size: 15px;
     margin-left: 7px;
     display: inline-block;
+    cursor: pointer;
 
 }
 
