@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia Zoo</title>
     <link rel="stylesheet" href="css/connexion.css">
 </head>
+
 <body>
     <form>
         <h1>Se Connecter</h1>
         <p class="choose-email"> Accès réservée aux personnels</p>
+            <div class="mb-3">
+                <label for="EmailInput" class="form-label">adresse email</label> 
+                <input type="email" class="form-control" id="EmailInput" placeholder="joségarcia@mail.fr">
+            </div>
+            <div class="mb-3">
+                <label for="PassWord" class="form-label">Mot de Passe</label>
+                <input type="password" class="form-control" id="PassWord" placeholder="josé1234">
+            </div>
+            <div class="text">
+                <button type="submit" class="btn btn-primary">Connexion</button>
+            </div>
 
-        <div class="inputs">
-            <input types="Nom" placeholder="Nom">
-            <input types="Prenom" placeholder="Prenom">
-            <input types="email" placeholder="E-mail">
-            <input types="password" placeholder="Mot de passe">
-            <a href="#" >Demande de mot de passe</a>
-        </div>
-
-        <div class="button">
-            <button class="clic">Se Connecter</button>
-        </div>
-
-        <div class="link">
-            <a href="#">Mot de passe oublié ?</a>
+            <div class="lien">
+                <a href="/connexion/inscription.html">Créer un compte</a>
+            </div>
 
         <ul class="lien">
             <li><a href="/Accueil/accueil.html">Retour à l'accueil</a></li>
         </ul>
     </form>
 </body>
+
 </html>

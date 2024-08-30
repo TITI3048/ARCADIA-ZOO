@@ -32,9 +32,7 @@ form .inputs {
     flex-direction: column;
 }
 
-form .inputs input[types="email"],
-input[types="password"],  input[types="Nom"],
-input[types="Prenom"] {
+.mb-3 {
     padding: 20px;
     border-radius: 10px;
     border: none;
@@ -48,9 +46,12 @@ input[types="Prenom"] {
     text-align: center;
 }
 
-.button {
+.btn {
+    margin-left: auto;
+    margin-right: auto;
     padding: 15px 25px;
     text-align: center;
+    cursor: pointer;
 }
 
 form .clic {
@@ -69,11 +70,13 @@ form .clic {
 }
 
 .lien {
+    margin-top: 15px;
     text-align: center;
     color: #000000;
     text-decoration: none;
     list-style: none;
-    margin-right: 40px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
