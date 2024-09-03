@@ -51,6 +51,7 @@ body {
     width: 300px;
     height: 213px;
     float: left;
+    border-radius: 50%;
 }
 
 :root {
