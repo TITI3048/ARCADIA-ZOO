@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia Zoo</title>
     <link rel="stylesheet" href="css/jungle.css">
+    <script src="jungle.js"></script>
 </head>
 
 <body>
@@ -73,7 +74,7 @@
     <main>
         <div id="board">
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card1">
                     <div class="front">
                         <img class="image" src="image/im5.jpg" alt="5">
                         <h4>Le Gorille</h4>
@@ -93,13 +94,13 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="likecount">0</span>
+                        <span class="like" id="like-count" data-id="card1">0</span>
                         <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card2">
                     <div class="front">
                         <img class="image" src="image/tigre.jpg" alt="Tigre">
                         <h4>Le Tigre</h4>
@@ -119,14 +120,14 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="likecount">0</span>
+                        <span class="like" id="like-count" data-id="card2">0</span>
                         <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card3">
                     <div class="front">
                         <img class="image" src="image/orang-outan.jpg" alt="Orang Outan">
                         <h4>l'Orang Outan</h4>
@@ -159,14 +160,14 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="likecount">0</span>
+                        <span class="like" id="like-count" data-id="card3">0</span>
                         <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card4">
                     <div class="front">
                         <img class="image" src="image/panthére.jpg" alt="Panthère">
                         <h4>La Panthére</h4>
@@ -196,14 +197,14 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="likecount">0</span>
+                        <span class="like" id="like-count" data-id="card4">0</span>
                         <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card5">
                     <div class="front">
                         <img class="image" src="image/chimpanzé.jpg" alt="Chimpanzé">
                         <h4>Le Chimpanzé</h4>
@@ -234,14 +235,14 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="likecount">0</span>
+                        <span class="like" id="like-count" data-id="card5">0</span>
                         <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card6">
                     <div class="front">
                         <img class="image" src="image/lemurien.jpg" alt="Lémurien">
                         <h4>Le Lèmurien</h4>
@@ -271,14 +272,14 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="likecount">0</span>
+                        <span class="like" id="like-count" data-id="card6">0</span>
                         <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card7">
                     <div class="front">
                         <img class="image" src="image/panda.jpg" alt="Panda">
                         <h4>Le Panda</h4>
@@ -296,13 +297,13 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="likecount">0</span>
+                        <span class="like" id="like-count" data-id="card7">0</span>
                         <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="jungle.js"></script>
+        
     </main>
 
     <footer>

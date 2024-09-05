@@ -1,50 +1,35 @@
+const likes = document.querySelectorAll('.like');
+const likesState = {};
 
-const like = document.querySelector('.like');
+likes.forEach((like) => {
+    likesState[like.dataset.id] = { isLiked: false, countLike: 0 };
 
-let countLike = 0;
-like.addEventListener('click', () => {
+  const cardId = like.dataset.id; // Définir la variable cardId ici
 
-    if(countLike === 0) {
-        like.classList.toggle('anim-like');
-        countLike = 1;
-        like.style.backgroundPosition = 'right';
+    like.addEventListener('click', () => {
+    const likeCount = document.querySelector(`.like-count[data-id="${cardId}"]`);
+
+    if (!likesState[cardId].isLiked) {
+    likesState[cardId].isLiked = true;
+    likesState[cardId].countLike++;
+    likeCount.textContent = likesState[cardId].countLike;
+    like.classList.add('liked');
+    like.style.backgroundPosition = 'right';
+    console.log('Like added');
     } else {
-        countLike = 0;
-        like.style.backgroundPosition = 'left';
+    likesState[cardId].isLiked = false;
+    likesState[cardId].countLike--;
+    likeCount.textContent = likesState[cardId].countLike;
+    like.classList.remove('liked');
+    like.style.backgroundPosition = 'left';
+    console.log('Like removed');
     }
 
-});
-
-like.addEventListener('animationend', () => {
     like.classList.toggle('anim-like');
-})
+    });
 
-let isliked = false;
-let isdisliked = false;
-
-const togglelike = () => {
-    const button = document.getElementById('button');
-    const likecount = document.getElementById('likecount');
-
-    if(isliked) {
-        isliked = false;
-        likecount.textContent = parseInt(likecount.textContent)
-        - 1;
-        button.classList.remove("button");
-        button.classList.add("button");
-    }else{
-        isliked = true;
-        if(isdisliked) {
-            isdisliked = false;
-            const dislikecount = document.getElementById('likecount');
-            ("dislikecount");
-            dislikecount.textContent =parseInt(likecount.textContent) - 1;
-            const button = document.getElementById('button');
-            button.classList.remove("button");
-            button.classList.add("button");
-        }
-        likecount.textContent = parseInt(likecount.textContent) + 1;
-        button.classList.remove("button");
-        button.classList.add("button");
-    }
-}
+    like.addEventListener('animationend', () => {
+    console.log('Animation end event triggered');
+    like.classList.toggle('anim-like');
+    });
+});

@@ -316,7 +316,7 @@ h4 {
 }
 
 h3 {
-    color: #000000;
+    color: #fff;
     font-family: 'Consolas', sans-serif;
     font-size: 30px;
     padding-bottom: 50px;
@@ -357,6 +357,8 @@ h3 {
     padding-bottom: 20px;
     border: 3px solid #535252;
 }
+
+
 
 .etoile {
     width: 100px;
