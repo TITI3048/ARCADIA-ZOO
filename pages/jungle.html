@@ -6,42 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia Zoo</title>
-    <link rel="stylesheet" href="css/jungle.css">
-    <script src="jungle.js"></script>
+    <link rel="stylesheet" href="/css/jungle.css">
+    <script src="/js/jungle.js"></script>
 </head>
 
 <body>
 
     <div class="zoo">
-        <img src="image/LOGO RINO 3.png" class="image" alt="lion">
+        <img src="/image/LOGO RINO 3.png" class="image" alt="lion">
         <div class="marquee-rtl">
-            <div class="h1"> <img class="logo" src="image/logo1.png" alt="Arcadia Zoo Logo">
-                <img class="logo" src="image/logo2.png" alt="Arcadia Zoo"> Arcadia Zoo <img class="logo" src="image/logo3.png" alt="Arcadia Zoo">
-                <img class="logo" src="image/logo4.png" alt="Arcadia Zoo Logo">
+            <div class="h1"> <img class="logo" src="/image/logo1.png" alt="Arcadia Zoo Logo">
+                <img class="logo" src="/image/logo2.png" alt="Arcadia Zoo">
+                Arcadia Zoo
+                <img class="logo" src="/image/logo3.png" alt="Arcadia Zoo">
+                <img class="logo" src="/image/logo4.png" alt="Arcadia Zoo Logo">
             </div>
         </div>
     </div>
     <header class="menu">
         <nav>
             <ul>
-                <li><a href="/Accueil/accueil.html">Accueil</a></li>
-                <li><a href="/Services/services.html">Services</a></li>
+                <li><a href="/pages/accueil.html">Accueil</a></li>
+                <li><a href="/pages/services.html">Services</a></li>
                 <li class="menu-deroulant">
-                    <a href="/Habitats/habitats.html">Habitats et Animaux</a>
+                    <a>Habitats et Animaux</a>
                     <ul class="sous-menu">
-                        <li><a href="/jungle/jungle.html">La Jungle</a></li>
-                        <li><a href="/reptile/reptile.html">Les Réptiles</a></li>
-                        <li><a href="/reserve africaine/reserve-africaine.html">La Réserve Africaine</a></li>
-                        <li><a href="/voliere/voliere.html">Les Oiseaux</a></li>
+                        <li><a href="/pages/jungle.html">La Jungle</a></li>
+                        <li><a href="/pages/reptile.html">Les Réptiles</a></li>
+                        <li><a href="/pages/reserve-africaine.html">La Réserve Africaine</a></li>
+                        <li><a href="/pages/voliere.html">Les Oiseaux</a></li>
                     </ul>
                 </li>
-                <li><a href="/connexion/connexion.html">Connexion</a></li>
+                <li><a href="/pages/connexion.html">Connexion</a></li>
             </ul>
         </nav>
     </header>
     <div class="text">
-        <img src="/jungle/image/jungle2.jpeg" class="jungle1" alt="jungle">
-        <img src="/jungle/image/jungle.jpeg" class="jungle" alt="jungle">
+        <img src="/image/image-jungle/jungle2.jpeg" class="jungle1" alt="jungle">
+        <img src="/image/image-jungle/jungle.jpeg" class="jungle" alt="jungle">
         
         <h2>La Jungle</h2>
         <p>La jungle, ou forêt tropicale, est un écosystème riche en biodiversité situé près de l'Équateur. <br>
@@ -76,14 +78,14 @@
             <div class="container">
                 <div class="card" data-id="card1">
                     <div class="front">
-                        <img class="image" src="image/im5.jpg" alt="5">
+                        <img class="image" src="/image/image-jungle/im5.jpg" alt="5">
                         <h4>Le Gorille</h4>
 
                     </div>
                     <div class="back">
                         <h3>Le Gorille</h3>
                         <img class="image1"
-                            src="image/noble-gorille-dos-argent-chef-sa-famille-soudee-montre-sa-force-son-intelligence_1268-34972.jpg" alt="Gorille">
+                            src="/image/image-jungle/noble-gorille-dos-argent-chef-sa-famille-soudee-montre-sa-force-son-intelligence_1268-34972.jpg" alt="Gorille">
                         <p>Taille : Les gorilles de l'Ouest mesurent environ 1,6 mètre de longueur.</p>
                         <p>Poids : Les gorilles mâles peuvent peser entre 135 et 225 kilogrammes.</p>
                         <p>Alimentation : Les gorilles sont principalement herbivores et frugivores.<br>
@@ -95,19 +97,19 @@
                 <div class="box">
                     <div class="icons">
                         <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
+                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="card" data-id="card2">
                     <div class="front">
-                        <img class="image" src="image/tigre.jpg" alt="Tigre">
+                        <img class="image" src="/image/image-jungle/tigre.jpg" alt="Tigre">
                         <h4>Le Tigre</h4>
                     </div>
                     <div class="back">
                         <h3>Le Tigre</h3>
-                        <img class="image1" src="image/tigre2.jpg" alt="Tigre">
+                        <img class="image1" src="/image/image-jungle/tigre2.jpg" alt="Tigre">
 
                         <p>Taille : Les tigres mâles mesurent entre 2,6 et 3,3 mètres de longueur,<br>
                             et les femelles entre 2,3 et 2,75 mètres.</p>
@@ -121,7 +123,7 @@
                 <div class="box">
                     <div class="icons">
                         <span class="like" id="like-count" data-id="card2">0</span>
-                        <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
+                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
@@ -129,12 +131,12 @@
             <div class="container">
                 <div class="card" data-id="card3">
                     <div class="front">
-                        <img class="image" src="image/orang-outan.jpg" alt="Orang Outan">
+                        <img class="image" src="/image/image-jungle/orang-outan.jpg" alt="Orang Outan">
                         <h4>l'Orang Outan</h4>
                     </div>
                     <div class="back">
                         <h3>L'Orang Outan</h3>
-                        <img class="image1" src="image/orang-outang3.jpg" alt="Orang Outang">
+                        <img class="image1" src="/image/image-jungle/orang-outang3.jpg" alt="Orang Outang">
 
                         <p>Taille:<br>
                             Les orangs-outans mesurent entre 1,10 m et 1,40 m de hauteur debout.<br>
@@ -161,7 +163,7 @@
                 <div class="box">
                     <div class="icons">
                         <span class="like" id="like-count" data-id="card3">0</span>
-                        <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
+                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
@@ -169,12 +171,12 @@
             <div class="container">
                 <div class="card" data-id="card4">
                     <div class="front">
-                        <img class="image" src="image/panthére.jpg" alt="Panthère">
+                        <img class="image" src="/image/image-jungle/panthére.jpg" alt="Panthère">
                         <h4>La Panthére</h4>
                     </div>
                     <div class="back">
                         <h3>La Panthére</h3>
-                        <img class="image1" src="image/panthére2.jpg" alt="Panthère">
+                        <img class="image1" src="/image/image-jungle/panthére2.jpg" alt="Panthère">
 
                         <p>Taille:<br>
                             Longueur totale : 90 cm à 2,37 m (avec la queue)<br>
@@ -198,7 +200,7 @@
                 <div class="box">
                     <div class="icons">
                         <span class="like" id="like-count" data-id="card4">0</span>
-                        <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
+                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
@@ -206,12 +208,12 @@
             <div class="container">
                 <div class="card" data-id="card5">
                     <div class="front">
-                        <img class="image" src="image/chimpanzé.jpg" alt="Chimpanzé">
+                        <img class="image" src="/image/image-jungle/chimpanzé.jpg" alt="Chimpanzé">
                         <h4>Le Chimpanzé</h4>
                     </div>
                     <div class="back">
                         <h3>Le chimpanzé</h3>
-                        <img class="image1" src="image/chipanzé2.jpg" alt="Chimpanzé">
+                        <img class="image1" src="/image/image-jungle/chipanzé2.jpg" alt="Chimpanzé">
 
                         <p>Taille:<br>
                             Femelle : 110 cm<br>
@@ -236,7 +238,7 @@
                 <div class="box">
                     <div class="icons">
                         <span class="like" id="like-count" data-id="card5">0</span>
-                        <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
+                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
@@ -244,12 +246,12 @@
             <div class="container">
                 <div class="card" data-id="card6">
                     <div class="front">
-                        <img class="image" src="image/lemurien.jpg" alt="Lémurien">
+                        <img class="image" src="/image/image-jungle/lemurien.jpg" alt="Lémurien">
                         <h4>Le Lèmurien</h4>
                     </div>
                     <div class="back">
                         <h3>Le Lémurien</h3>
-                        <img class="image1" src="image/lemurien2.jpg" alt="Lémurien">
+                        <img class="image1" src="/image/image-jungle/lemurien2.jpg" alt="Lémurien">
 
                         <p>Taille:<br>
                             La taille des lémuriens varie de 30 cm à 60 cm environ, du museau à la queue.<br>
@@ -273,7 +275,7 @@
                 <div class="box">
                     <div class="icons">
                         <span class="like" id="like-count" data-id="card6">0</span>
-                        <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
+                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
@@ -281,12 +283,12 @@
             <div class="container">
                 <div class="card" data-id="card7">
                     <div class="front">
-                        <img class="image" src="image/panda.jpg" alt="Panda">
+                        <img class="image" src="/image/image-jungle/panda.jpg" alt="Panda">
                         <h4>Le Panda</h4>
                     </div>
                     <div class="back">
                         <h3>Le Panda</h3>
-                        <img class="image1" src="image/panda2.jpg" alt="Panda">
+                        <img class="image1" src="/image/image-jungle/panda2.jpg" alt="Panda">
 
                         <p>Taille : Les pandas mesurent entre 1,2 et 1,9 mètre de longueur.</p>
                         <p>Poids : Les pandas mâles pèsent entre 85 et 125 kilogrammes,<br>
@@ -298,7 +300,7 @@
                 <div class="box">
                     <div class="icons">
                         <span class="like" id="like-count" data-id="card7">0</span>
-                        <button onclick="togglelike()"> <img src="image/like.png" class="button" alt="Like"></button>
+                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
                     </div>
                 </div>
             </div>
@@ -308,10 +310,10 @@
 
     <footer>
         <p class="contener">&copy; 2024 Arcadia Zoo Forêt de broceliande</p>
-        <img src="image/icon-facebook.png" class="logo" alt="facebook">
-        <img src="image/icon-instagram.png" class="logo" alt="instagram">
-        <img src="image/icon-x.png" class="logo" alt="x">
-        <img src="image/icon-whatsapp.jpg" class="logo" alt="whatsapp">
+        <img src="/image/image footer/icon-facebook.png" class="logo" alt="facebook">
+        <img src="/image/image footer/icon-instagram.png" class="logo" alt="instagram">
+        <img src="/image/image footer/icon-x.png" class="logo" alt="x">
+        <img src="/image/image footer/icon-whatsapp.jpg" class="logo" alt="whatsapp">
     </footer>
 
 </body>
