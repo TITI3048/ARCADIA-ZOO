@@ -45,7 +45,13 @@ body {
 
 .h1 {
     font-size: 90px;
-    font-family: 'Consolas', sans-serif;
+    font-family: 'arial', sans-serif;
+    background-color: url('/test/spectre-eclairs-lumiere-coloree_2.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: h1;
+    color: transparent;
+
 }
 
 .image {
