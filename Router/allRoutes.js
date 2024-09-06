@@ -1,14 +1,15 @@
 import Route from "./router/Route.js";
 
 export const allRoutes = [
-    new Route("/Accueil", "/Accueil/accueil.html", "/Accueil/accueil.js"),
-    new Route("/connexion, /Connexion/connexion.html", "/Connexion/connexion.js", "/espace-admin/admin.php"),
-    new Route("/Services", "/Services/services.html", "/Services/services.js"),
-    new Route("/avis", "/Avis/avis.html", "/Avis/avis.js"),
-    new Route("/jungle", "/Jungle/jungle.html", "/Jungle/jungle.js"),
-    new Route("/reptile", "/Reptile/reptile.html", "/Reptile/reptile.js"),
-    new Route("/reserve africaine", "/ReserveAfricaine/reserveAfricaine.html", "/ReserveAfricaine/reserveAfricaine.js"),
-    new Route("/voliere", "/Voliere/voliere.html", "/Voliere/voliere.js"),
+    new Route("/pages", "/pages/accueil.html", "/js/accueil.js"),
+    new Route("/pages", "//pages/connexion.html"),
+    new Route("/pages", "/pages/inscription.html"),
+    new Route("/pages", "/pages/services.html"),
+    new Route("/pages", "/pages/avis.html", "/js/avis.js"),
+    new Route("/pages", "/pages/jungle.html" , "/js/jungle.js"),
+    new Route("/pages", "/pages/reptile.html", "/js/reptile.js"),
+    new Route("/pages", "/pages/reserve-africaine.html", "/js/reserve-africaine.js"),
+    new Route("/pages", "/pages/voliere.html", "/js/voliere.js"),
 ];
 
 export const websiteName = "ARCADIA ZOO";
