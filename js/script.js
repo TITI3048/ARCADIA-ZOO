@@ -45,6 +45,3 @@ function isConnected(){
 if(isConnected()){
     alert("je suis connecté");
 }
-else{
-    alert("je ne suis pas connecté");
-}
