@@ -13,29 +13,30 @@
     <form method="POST" class="admin">
         <h1>Se Connecter</h1>
         <p class="choose-email"> Accès réservé au personnel</p>
-            <div class="mb-3">
-                <label for="EmailInput" class="form-label" name="pseudo">adresse email</label> 
-                <input type="email" class="form-control" id="EmailInput">
-            </div>
-            <div class="mb-3">
-                <label for="PasswordInput" class="form-label" name="mdp">Mot de Passe</label>
-                <input type="password" class="form-control" id="PasswordInput">
-            </div>
-            <div class="text">
-                <button type="submit" class="btn btn-primary" name="valider">Connexion
-                </button>
-                
-            </div>
+        <div class="mb-3">
+            <label for="EmailInput" class="form-label" name="pseudo">adresse email</label>
+            <input type="email" class="form-control" id="EmailInput">
+        </div>
+        <div class="mb-3">
+            <label for="PasswordInput" class="form-label" name="mdp">Mot de Passe</label>
+            <input type="password" class="form-control" id="PasswordInput">
+        </div>
+        <div class="text">
+            <button type="button" class="btn btn-primary" id="btnSignin" name="valider">Connexion
+            </button>
 
-            <div class="lien">
-                <a href="/pages/iscription.html">Créer un compte</a>
-            </div>
+        </div>
+
+        <div class="lien">
+            <a href="/pages/iscription.html">Créer un compte</a>
+        </div>
 
         <div class="lien">
             <a href="/pages/accueil.html">Retour à l'accueil</a>
         </div>
     </form>
 </body>
+<script src="/js/script.js"></script>
 <script src="/js/connexion.js"></script>
 
 </html>

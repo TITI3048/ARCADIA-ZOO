@@ -1,23 +1,21 @@
-alert("salut");
+const mailInput = document.getElementById('EmailInput');
+const passwordlInput = document.getElementById('PasswordInput');
+const btnSignin = document.getElementById('btnSignin');
 
-const inputMail = document.getElementById('EmailInput');
-const inputPassword = document.getElementById('PasswordlInput');
+btnSignin.addEventListener("click", checkCredentials);
 
-inputEmail.addEventListener("keyup", validationform);
-inputPassword.addEventListener("keyup", validationform);
+function checkCredentials(){
+    if(mailInput.value == "josé@mail.com"  && passwordlInput.value == "123456"){
+        alert("vous êtes bien connecté");
+    window.location.replace("/pages/dashboard.html");
 
-function validationform(){
-    validationRequired(inputMail);
-    validationRequired(inputPassword);
-}
-
-function validationRequired(input){
-    if(input.value !=''){
-        input.classList.add("is-valid");
-        input.classList.remove("is-invalid");
+    const token = "okokokok";
+    setToken(token);
     }
     else{
-        input.classList.add("is-invalid");
-        input.classList.remove("is-valid");
+        mailInput.classList.add("is-invalid");
+        passwordlInput.classList.add("is-invalid");
+        alert("identifiant ou mot de passe incorrect");
     }
 }
+
