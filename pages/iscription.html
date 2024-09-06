@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia Zoo</title>
     <link rel="stylesheet" href="/css/inscription.css">
+    <script src="/js/inscription.js"></script>
+    <script src="/js/script.js"></script>
 </head>
 
 <body>
     <form method="POST" class="admin">
         <h1>Créer un Compte</h1>
-        <p class="choose-email"> Accès réservé au personnel</p>
+        <p class="choose-email"> Renseignement</p>
             <div class="mb-3">
-                <label for="EmailInput" class="form-label" name="pseudo">Nom</label> 
-                <input type="email" class="form-control" id="EmailInput">
+                <label for="NameInput" class="form-label" name="pseudo">Nom</label> 
+                <input type="name" class="form-control" id="NameInput">
             </div>
             <div class="mb-3">
-                <label for="EmailInput" class="form-label" name="pseudo">Prenom</label> 
-                <input type="email" class="form-control" id="EmailInput">
+                <label for="UsernameInput" class="form-label" name="pseudo">Prenom</label> 
+                <input type="username" class="form-control" id="UsernameInput">
             </div>
             <div class="mb-3">
                 <label for="EmailInput" class="form-label" name="pseudo">adresse email</label> 
@@ -29,7 +31,7 @@
                 <input type="password" class="form-control" id="PassWord">
             </div>
             <div class="text">
-                <button type="submit" class="btn btn-primary" name="valider">Connexion
+                <button type="submit" class="btn btn-primary" id="btnSignin" name="valider">Connexion
                 </button>
                 
             </div>
