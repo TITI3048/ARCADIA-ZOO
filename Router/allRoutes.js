@@ -1,7 +1,7 @@
 import Route from "./Route.js";
 
 export const allRoutes = [
-    new Route("/", "/pages/accueil.html", "/js/accueil.js"),
+    new Route("/","/pages/accueil.html","/js/accueil.js"),
     new Route("/connexion", "/pages/connexion.html", "/js/connexion.js"),
     new Route("/inscription", "/pages/inscription.html", "/js/inscription.js"),
     new Route("/services", "/pages/services.html"),
