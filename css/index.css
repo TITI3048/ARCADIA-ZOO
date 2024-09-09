@@ -167,3 +167,26 @@ nav>ul>li:hover>a {
 .menu-deroulant:hover>.sous-menu {
     animation: apparitionSousMenu 1s forwards;
 }
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: #C28165;
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contener {
+    margin-left: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
