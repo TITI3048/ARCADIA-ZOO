@@ -14,29 +14,32 @@
     <form method="POST" class="admin">
         <h1>Créer un Compte</h1>
         <p class="choose-email"> Renseignement</p>
-            <div class="mb-3">
-                <label for="NameInput" class="form-label" name="pseudo">Nom</label> 
-                <input type="name" class="form-control" id="NameInput">
-            </div>
-            <div class="mb-3">
-                <label for="UsernameInput" class="form-label" name="pseudo">Prenom</label> 
-                <input type="username" class="form-control" id="UsernameInput">
-            </div>
-            <div class="mb-3">
-                <label for="EmailInput" class="form-label" name="pseudo">adresse email</label> 
-                <input type="email" class="form-control" id="EmailInput">
-            </div>
-            <div class="mb-3">
-                <label for="PassWord" class="form-label" name="mdp">Mot de Passe</label>
-                <input type="password" class="form-control" id="PassWord">
-            </div>
-            <div class="text">
-                <button type="submit" class="btn btn-primary" id="btnSignin" name="valider">Connexion
-                </button>
-                
-            </div>
+        <div class="mb-3">
+            <label for="Nom" class="form-label" name="pseudo">Nom</label>
+            <input type="text" class="form-control" id="NomInput">
+        </div>
+        <div class="mb-3">
+            <label for="PrenomInput" class="form-label" name="pseudo">Prenom</label>
+            <input type="text" class="form-control" id="PrenomInput">
+        </div>
+        <div class="mb-3">
+            <label for="EmailInput" class="form-label" name="pseudo">adresse email</label>
+            <input type="email" class="form-control" id="EmailInput">
+        </div>
+        <div class="mb-3">
+            <label for="PassWordInput" class="form-label" name="mdp">Mot de Passe</label>
+            <input type="password" class="form-control" id="PassWordInput">
+        </div>
+        <div class="mb-3">
+            <label for="ValidatePassWordInput" class="form-label" name="mdp"> Valider le Mot de Passe</label>
+            <input type="password" class="form-control" id="ValidatePassWordInput">
+        </div>
+        <div class="text">
+            <button type="submit" class="btn btn-primary" id="btn-validate" name="valider">Inscription
+            </button>
+        </div>
         <div class="lien">
-            <a href="/pages/accueil.html">Retour à l'accueil</a>
+            <a href="/pages/connexion.html">Vous avez déja un compte? Connectez-vous ici!</a>
         </div>
     </form>
 </body>

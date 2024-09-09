@@ -1,31 +1,55 @@
-const namInput = document.getElementById('NameInput'); 
-const usernameInput = document.getElementById('UsernameInput');
-const mailInput = document.getElementById('EmailInput');
-const passwordlInput = document.getElementById('PasswordInput');
-const btnSignin = document.getElementById('btnSignin');
+const inputNom = document.getElementById("NomInput");
+const inputPreNom = document.getElementById("PrenomInput");
+const inputMail = document.getElementById("EmailInput");
+const inputPassword = document.getElementById("PasswordInput");
+const inputValidationPassword = document.getElementById("ValidatePasswordInput");
+const btnValidation = document.getElementById("btn-validate");
 
-btnSignin.addEventListener("click", checkCredentials);
+inputNom.addEventListener("keyup", validateForm); 
+inputPreNom.addEventListener("keyup", validateForm);
+inputMail.addEventListener("keyup", validateForm);
+inputPassword.addEventListener("keyup", validateForm);
+inputValidationPassword.addEventListener("keyup", validateForm);
 
-function checkCredentials(){
+function validateForm(){
+    const nomOK = validateRequired(inputNom);
+    const  prenomOK = validateRequired(inputPreNom);
+    const mailOK = validateRequired(inputMail);
 
-
-    if(mailInput.value == "vétérinaire1@mail.com"  && passwordlInput.value == "vet123"){
-        alert("vous êtes bien connecté");
-    if(namInput.value === "Docteur") {
-            console.log("le nom est Docteur");
-        }
-    if(usernameInput.value === "Dolittle") {
-            console.log("le nom d'utilisateur est Dolittle");
-        }
-    window.location.replace("/pages/dashvet.html");
-
-    const token = "okokokok";
-    setToken(token);
+    if(nomOK && prenomOK && mailOK){
+        btnValidation.disabled = false;
     }
     else{
-        mailInput.classList.add("is-invalid");
-        passwordlInput.classList.add("is-invalid");
-        alert("identifiant ou mot de passe incorrect");
+        btnValidation.disabled = true;
+}
+}
+
+function validateMail(input){
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const mailUser = input.value;
+    if(mailUser.match(mailRegex)){
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid");
+        return true;
+    }
+    else{
+        input.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        return false;
+    }
+}
+
+function validateRequired(input){
+    if(input.value != ''){
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid"); 
+        return true;
+    }
+
+    else{
+        input.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        return false;
     }
 }
 
