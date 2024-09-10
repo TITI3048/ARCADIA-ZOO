@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia Zoo</title>
     <link rel="stylesheet" href="/css/voliere.css">
-    <script src="/js/voliere.js"></script>
 </head>
 
 <body>
@@ -42,41 +41,43 @@
     </header>
     <div class="text">
         <img src="/image/image-voliere/voliere.jpeg" class="voliere">
-        <img src="/image/image-voliere/voliere2.jpeg"  class="voliere2">
-        <img src="/image/image-voliere/voliére3.jpeg"  class="voliere3">
+        <img src="/image/image-voliere/voliere2.jpeg" class="voliere2">
+        <img src="/image/image-voliere/voliére3.jpeg" class="voliere3">
 
 
         <div class="texte0">
-        <h2>Les Oiseaux</h2>
-        <h4>Habitats Aquatiques</h4>
-        <p>Les oiseaux aquatiques, tels que les canards et les flamants roses,
-            sont souvent logés dans des enclos avec des étangs, des petits lacs ou des mares.
-            Ces environnements permettent aux oiseaux de nager et de se nourrir de manière similaire à leur habitat
-            naturel.
+            <h2>Les Oiseaux</h2>
+            <h4>Habitats Aquatiques</h4>
+            <p>Les oiseaux aquatiques, tels que les canards et les flamants roses,
+                sont souvent logés dans des enclos avec des étangs, des petits lacs ou des mares.
+                Ces environnements permettent aux oiseaux de nager et de se nourrir de manière similaire à leur habitat
+                naturel.
         </div>
 
-            <div class="texte1">
-        <h4>Habitats Forestiers</h4>
-        Les oiseaux de la forêt, comme les perroquets et les toucans, sont placés dans des volières spacieuses avec une
-        végétation dense.
-        Ces volières sont souvent équipées de branches et de perchoirs pour permettre aux oiseaux de voler et de se
-        percher, imitant ainsi les forêts tropicales ou tempérées.
-    </div>
+        <div class="texte1">
+            <h4>Habitats Forestiers</h4>
+            Les oiseaux de la forêt, comme les perroquets et les toucans, sont placés dans des volières spacieuses avec
+            une
+            végétation dense.
+            Ces volières sont souvent équipées de branches et de perchoirs pour permettre aux oiseaux de voler et de se
+            percher, imitant ainsi les forêts tropicales ou tempérées.
+        </div>
 
         <div class="texte2">
-        <h4>Habitats de Prairie et de Montagne</h4>
-        Les rapaces, tels que les aigles et les faucons, sont souvent logés dans des enclos qui reproduisent les grands
-        espaces ouverts ou montagnards.
-        Ces enclos sont conçus pour permettre aux oiseaux de voler sur de courtes distances et de chasser des proies
-        vivantes, simulant ainsi leur comportement naturel.
-        </p>
-    </div>
+            <h4>Habitats de Prairie et de Montagne</h4>
+            Les rapaces, tels que les aigles et les faucons, sont souvent logés dans des enclos qui reproduisent les
+            grands
+            espaces ouverts ou montagnards.
+            Ces enclos sont conçus pour permettre aux oiseaux de voler sur de courtes distances et de chasser des proies
+            vivantes, simulant ainsi leur comportement naturel.
+            </p>
+        </div>
     </div>
 
     <main>
         <div id="board">
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card28">
                     <div class="front">
                         <img src="/image/image-voliere/toucan.jpg">
                         <h4>Le Toucan</h4>
@@ -111,14 +112,15 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card28">0</span>
+                        <button class="like-button" data-id="card28"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card29">
                     <div class="front">
                         <img src="/image/image-voliere/hornbill.jpg">
                         <h4>L'Hornbill</h4>
@@ -150,14 +152,15 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card29">0</span>
+                        <button class="like-button" data-id="card29"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card30">
                     <div class="front">
                         <img src="/image/image-voliere/perroquet.jpg">
                         <h4>Le Perroquet</h4>
@@ -197,14 +200,15 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card30">0</span>
+                        <button class="like-button" data-id="card30"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card31">
                     <div class="front">
                         <img src="/image/image-voliere/flamant-rose.jpg">
                         <h4>Le Flamant Rose</h4>
@@ -237,144 +241,160 @@
                             Les graines de plantes aquatiques.</p>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                    <div class="box">
+                        <div class="icons">
+                            <span class="like-count" data-id="card31">0</span>
+                            <button class="like-button" data-id="card31"> <img src="/image/like.png" class="button"
+                                    alt="Like"></button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="container">
-                <div class="card">
-                    <div class="front">
-                        <img src="/image/image-voliere/huppe facié2.avif">
-                        <h4>La Huppe Fasciée</h4>
+                <div class="container">
+                    <div class="card" data-id="card32">
+                        <div class="front">
+                            <img src="/image/image-voliere/huppe facié2.avif">
+                            <h4>La Huppe Fasciée</h4>
+                        </div>
+                        <div class="back">
+                            <img class="image1" src="/image/image-voliere/huppe facié.jpg">
+                            <h3>La Huppe Fasciée</h3>
+                            <p> Taille et poids:<br>
+                                Longueur : 26 à 32 cm<br>
+                                Envergure : 42 à 46 cm<br>
+                                Poids : 55 à 80 g </p>
+
+                            <p>Apparence:<br>
+                                Plumage roux-orangé avec des ailes et une queue noires et blanche.
+                                Longue huppe érectile orange et noire sur la tête.
+                                Long bec fin et courbé.</p>
+
+                            <p>Alimentation:<br>
+                                Régime exclusivement insectivore.
+                                Se nourrit au sol, utilisant son long bec pour fouiller la terre.
+                                Consomme principalement des insectes et leurs larves : coléoptères, vers de terre,
+                                grillons,
+                                fourmis, courtilières.
+                                Peut aussi manger des petits invertébrés comme les limaces et les escargots.
+                                Occasionnellement, capture de petits serpents ou lézards.
+                                La Huppe fasciée est un oiseau migrateur qui passe l'hiver en Afrique et revient en
+                                Europe
+                                pour la
+                                saison de reproduction.
+                                Elle vit dans des milieux ouverts comme les vergers, prairies, vignobles et jardins.</p>
+                        </div>
                     </div>
-                    <div class="back">
-                        <img class="image1" src="/image/image-voliere/huppe facié.jpg">
-                        <h3>La Huppe Fasciée</h3>
-                        <p> Taille et poids:<br>
-                            Longueur : 26 à 32 cm<br>
-                            Envergure : 42 à 46 cm<br>
-                            Poids : 55 à 80 g </p>
-
-                        <p>Apparence:<br>
-                            Plumage roux-orangé avec des ailes et une queue noires et blanche.
-                            Longue huppe érectile orange et noire sur la tête.
-                            Long bec fin et courbé.</p>
-
-                        <p>Alimentation:<br>
-                            Régime exclusivement insectivore.
-                            Se nourrit au sol, utilisant son long bec pour fouiller la terre.
-                            Consomme principalement des insectes et leurs larves : coléoptères, vers de terre, grillons,
-                            fourmis, courtilières.
-                            Peut aussi manger des petits invertébrés comme les limaces et les escargots.
-                            Occasionnellement, capture de petits serpents ou lézards.
-                            La Huppe fasciée est un oiseau migrateur qui passe l'hiver en Afrique et revient en Europe
-                            pour la
-                            saison de reproduction.
-                            Elle vit dans des milieux ouverts comme les vergers, prairies, vignobles et jardins.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="card">
-                    <div class="front">
-                        <img src="/image/image-voliere/aigle royal2.jpg">
-                        <h4>L'Aigle Royale</h4>
-                    </div>
-                    <div class="back">
-                        <img class="image1" src="/image/image-voliere/aigle royal.jpg" alt="Aigle Royal">
-                        <h3>L'Aigle Royale</h3>
-                        <p>Taille:<br>
-                            L'Aigle royal mesure entre 66 et 100 cm de longueur. Son envergure est impressionnante,
-                            allant de
-                            1,8 à 2,34 mètres.</p>
-
-                        <p>Poids:<br>
-                            Le poids de l'Aigle royal varie généralement entre 3 et 6,5 kg.
-                            Les femelles sont en moyenne plus grandes et plus lourdes que les mâles.</p>
-
-                        <p>Alimentation:<br>
-                            L'Aigle royal est un prédateur opportuniste avec un régime alimentaire varié. Il se nourrit
-                            principalement de :
-                            Mammifères (lièvres, lapins, écureuils, marmottes, renards et parfois de jeunes chevreuils),
-                            oiseaux (faisans et des tétras), reptiles et poissons occasionnellement. En hiver ou lorsque
-                            les proies se font rares, il peut
-                            adopter
-                            un comportement charognard.
-                            La plupart de ses proies pèsent entre 0,5 et 4 kg, bien qu'il puisse s'attaquer à des
-                            animaux plus
-                            gros dans certains cas. Dans les Alpes, son alimentation est composée à 80% de marmottes.
-                        </p>
-
-                        <p>L'Aigle royal est un chasseur redoutable, capable de repérer une proie à 3 km de distance et
-                            de
-                            fondre sur elle à une vitesse pouvant atteindre 130 km/h en vol horizontal, et jusqu'à 320
-                            km/h en
-                            piqué.</p>
+                    <div class="box">
+                        <div class="icons">
+                            <span class="like-count" data-id="card32">0</span>
+                            <button class="like-button" data-id="card32"> <img src="/image/like.png" class="button"
+                                    alt="Like"></button>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+
+                <div class="container">
+                    <div class="card" data-id="card33">
+                        <div class="front">
+                            <img src="/image/image-voliere/aigle royal2.jpg">
+                            <h4>L'Aigle Royale</h4>
+                        </div>
+                        <div class="back">
+                            <img class="image1" src="/image/image-voliere/aigle royal.jpg" alt="Aigle Royal">
+                            <h3>L'Aigle Royale</h3>
+                            <p>Taille:<br>
+                                L'Aigle royal mesure entre 66 et 100 cm de longueur. Son envergure est impressionnante,
+                                allant de
+                                1,8 à 2,34 mètres.</p>
+
+                            <p>Poids:<br>
+                                Le poids de l'Aigle royal varie généralement entre 3 et 6,5 kg.
+                                Les femelles sont en moyenne plus grandes et plus lourdes que les mâles.</p>
+
+                            <p>Alimentation:<br>
+                                L'Aigle royal est un prédateur opportuniste avec un régime alimentaire varié. Il se
+                                nourrit
+                                principalement de :
+                                Mammifères (lièvres, lapins, écureuils, marmottes, renards et parfois de jeunes
+                                chevreuils),
+                                oiseaux (faisans et des tétras), reptiles et poissons occasionnellement. En hiver ou
+                                lorsque
+                                les proies se font rares, il peut
+                                adopter
+                                un comportement charognard.
+                                La plupart de ses proies pèsent entre 0,5 et 4 kg, bien qu'il puisse s'attaquer à des
+                                animaux plus
+                                gros dans certains cas. Dans les Alpes, son alimentation est composée à 80% de
+                                marmottes.
+                            </p>
+
+                            <p>L'Aigle royal est un chasseur redoutable, capable de repérer une proie à 3 km de distance
+                                et
+                                de
+                                fondre sur elle à une vitesse pouvant atteindre 130 km/h en vol horizontal, et jusqu'à
+                                320
+                                km/h en
+                                piqué.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icons">
+                            <span class="like-count" data-id="card33">0</span>
+                            <button class="like-button" data-id="card33"> <img src="/image/like.png" class="button"
+                                    alt="Like"></button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="container">
-                <div class="card">
-                    <div class="front">
-                        <img src="/image/image-voliere/vautour (2).jpg">
-                        <h4>Le Vautour</h4>
+                <div class="container">
+                    <div class="card" data-id="card34">
+                        <div class="front">
+                            <img src="/image/image-voliere/vautour (2).jpg">
+                            <h4>Le Vautour</h4>
+                        </div>
+                        <div class="back">
+                            <img class="image1" src="/image/image-voliere/vautour.jpg">
+                            <h3>Le Vautour</h3>
+                            <p>Taille et poids:<br>
+                                L'envergure varie généralement entre 2,35 et 2,95 mètres selon les espèces.
+                                La longueur du corps se situe entre 95 et 115 cm.
+                                Le poids moyen est de 7 à 12,5 kg, pouvant aller de 6,5 à 11,5 kg pour le vautour fauve.
+                            </p>
+
+                            <p>Alimentation:<br>
+                                Les vautours sont des nécrophages obligatoires, se nourrissant presque exclusivement de
+                                cadavres
+                                d'animaux.
+                                Ils repèrent les carcasses en volant à haute altitude grâce à leur excellente vue.
+                                Chaque espèce est spécialisée dans la consommation de certaines parties des carcasses,
+                                formant une
+                                guilde pour l'élimination complète d'un cadavre.
+                                Leur système digestif leur permet de détruire de nombreux virus et bactéries
+                                potentiellement
+                                dangereux.</p>
+
+                            <p>Caractéristiques physiques:<br>
+                                Tête généralement dépourvue de plumes mais recouverte d'un fin duvet.
+                                Long cou adapté pour fouiller les carcasses.
+                                Large envergure adaptée au vol plané sur de longues distances.
+                                Pattes adaptées à la marche plutôt qu'à la préhension de proies.
+                                Le vautour joue un rôle écologique important en éliminant rapidement les cadavres
+                                d'animaux
+                                sauvages
+                                et domestiques.</p>
+                        </div>
                     </div>
-                    <div class="back">
-                        <img class="image1" src="/image/image-voliere/vautour.jpg">
-                        <h3>Le Vautour</h3>
-                        <p>Taille et poids:<br>
-                            L'envergure varie généralement entre 2,35 et 2,95 mètres selon les espèces.
-                            La longueur du corps se situe entre 95 et 115 cm.
-                            Le poids moyen est de 7 à 12,5 kg, pouvant aller de 6,5 à 11,5 kg pour le vautour fauve.</p>
-
-                        <p>Alimentation:<br>
-                            Les vautours sont des nécrophages obligatoires, se nourrissant presque exclusivement de
-                            cadavres
-                            d'animaux.
-                            Ils repèrent les carcasses en volant à haute altitude grâce à leur excellente vue.
-                            Chaque espèce est spécialisée dans la consommation de certaines parties des carcasses,
-                            formant une
-                            guilde pour l'élimination complète d'un cadavre.
-                            Leur système digestif leur permet de détruire de nombreux virus et bactéries potentiellement
-                            dangereux.</p>
-
-                        <p>Caractéristiques physiques:<br>
-                            Tête généralement dépourvue de plumes mais recouverte d'un fin duvet.
-                            Long cou adapté pour fouiller les carcasses.
-                            Large envergure adaptée au vol plané sur de longues distances.
-                            Pattes adaptées à la marche plutôt qu'à la préhension de proies.
-                            Le vautour joue un rôle écologique important en éliminant rapidement les cadavres d'animaux
-                            sauvages
-                            et domestiques.</p>
+                    <div class="box">
+                        <div class="icons">
+                            <span class="like-count" data-id="card34">0</span>
+                            <button class="like-button" data-id="card34"> <img src="/image/like.png" class="button"
+                                    alt="Like"></button>
+                        </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
-                    </div>
-                </div>
-            </div>
 
-            <script src="voliere.js"></script>
+                <script src="/js/like.js"></script>
+                <script src="/js/script.js"></script>
     </main>
 
     <footer>

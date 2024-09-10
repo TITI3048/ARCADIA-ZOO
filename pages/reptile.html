@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia Zoo</title>
     <link rel="stylesheet" href="/css/reptile.css">
-    <script src="/js/script.js"></script>
 </head>
 
 <body>
@@ -72,9 +71,9 @@
     <main>
         <div id="board">
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card8">
                     <div class="front">
-                        <img src="/image/image-reptile/aligator.jpg">
+                        <img class="image" src="/image/image-reptile/aligator.jpg">
                         <h4>L'Alligator</h4>
                     </div>
                     <div class="back">
@@ -103,17 +102,18 @@
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card8">0</span>
+                        <button class="like-button" data-id="card8"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card9">
                     <div class="front">
-                        <img src="/image/image-reptile/crocodile.jpg">
+                        <img class="image" src="/image/image-reptile/crocodile.jpg">
                         <h4>Le Crocodile</h4>
                     </div>
                     <div class="back">
@@ -139,22 +139,22 @@
                             Ils peuvent rester de longs mois sans se nourrir grâce à leurs réserves de graisse stockées
                             dans
                             leur queue et leur abdomen.</p>
-                        <div class="like"></div>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card9">0</span>
+                        <button class="like-button" data-id="card9"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card10">
                     <div class="front">
-                        <img src="/image/image-reptile/anaconda-2.jpg">
+                        <img class="image" src="/image/image-reptile/anaconda-2.jpg">
                         <h4>l'Anaconda</h4>
                     </div>
                     <div class="back">
@@ -176,24 +176,24 @@
                             Avec sa grande taille et son mode de chasse impressionnant, <br>
                             l'anaconda est considéré comme l'un des plus grands serpents du monde.<br>
                             Son régime alimentaire varié en fait un prédateur majeur des écosystèmes d'Amérique du
-                            Sud.<br>
-                        </p>
-                        <div class="like"></div>
+                            Sud.</p>
+
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card10">0</span>
+                        <button class="like-button" data-id="card10"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card11">
                     <div class="front">
-                        <img src="/image/image-reptile/boa.jpg">
+                        <img class="image" src="/image/image-reptile/boa.jpg">
                         <h4>Le Boa</h4>
                     </div>
                     <div class="back">
@@ -220,22 +220,23 @@
                             En captivité, on peut les nourrir avec des rongeurs comme des souris ou des rats, en
                             veillant à
                             fournir des proies mortes pour éviter les blessures.</p>
-                        <div class="like"></div>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card11">0</span>
+                        <button class="like-button" data-id="card11"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
+
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card12">
                     <div class="front">
-                        <img src="/image/image-reptile/python.jpg">
+                        <img class="image" src="/image/image-reptile/python.jpg">
                         <h4>Le Python</h4>
                     </div>
                     <div class="back">
@@ -266,22 +267,22 @@
                             Sa robe aux motifs complexes et ses couleurs vives en font également un serpent très prisé
                             en
                             terrariophilie.</p>
-                        <div class="like"></div>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card12">0</span>
+                        <button class="like-button" data-id="card12"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card13">
                     <div class="front">
-                        <img src="/image/image-reptile/cobra.jpg">
+                        <img class="image" src="/image/image-reptile/cobra.jpg">
                         <h4>Le Cobra</h4>
                     </div>
                     <div class="back">
@@ -307,22 +308,22 @@
                             Son venin est l'un des plus puissants du règne animal avec une dose létale médiane de 1,31
                             mg/kg
                             par voie intraveineuse.</p>
-                        <div class="like"></div>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card13">0</span>
+                        <button class="like-button" data-id="card13"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card14">
                     <div class="front">
-                        <img src="/image/image-reptile/komodo-dragon-.jpg">
+                        <img class="image" src="/image/image-reptile/komodo-dragon-.jpg">
                         <h4>Le Dragon de Komodo</h4>
                     </div>
                     <div class="back">
@@ -351,22 +352,22 @@
                             avaler des proies entières de la taille d'une chèvre.
                             Leur salive contient un venin légèrement toxique et de nombreuses bactéries pathogènes qui
                             accélèrent la mort des proies blessées.</p>
-                        <div class="like"></div>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card14">0</span>
+                        <button class="like-button" data-id="card14"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card15">
                     <div class="front">
-                        <img src="/image/image-reptile/cameleon.jpg">
+                        <img class="image" src="/image/image-reptile/cameleon.jpg">
                         <h4>Le Caméléon</h4>
                     </div>
                     <div class="back">
@@ -394,22 +395,22 @@
                             alimentaire typique des caméléons insectivores. Un terrarium adapté et un apport équilibré
                             en
                             insectes variés sont essentiels pour son bien-être en captivité</p>
-                        <div class="like"></div>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card15">0</span>
+                        <button class="like-button" data-id="card15"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
 
 
             <div class="container">
-                <div class="card">
+                <div class="card" data-id="card16">
                     <div class="front">
-                        <img src="/image/image-reptile/tortue.jpg">
+                        <img class="image" src="/image/image-reptile/tortue.jpg">
                         <h4>La Tortue</h4>
                     </div>
                     <div class="back">
@@ -440,21 +441,20 @@
                             Avec leur métabolisme lent, les tortues géantes peuvent passer de longues périodes sans
                             s'alimenter ni boire, en puisant l'eau dans leur nourriture et en décomposant leurs réserves
                             de
-                            graisse.
-                        </p>
-                        <div class="like"></div>
+                            graisse.</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icons">
-                        <span class="like" id="like-count" data-id="card1">0</span>
-                        <button onclick="togglelike()"> <img src="/image/like.png" class="button" alt="Like"></button>
+                        <span class="like-count" data-id="card16">0</span>
+                        <button class="like-button" data-id="card16"> <img src="/image/like.png" class="button"
+                                alt="Like"></button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script src="reptile.js"></script>
+
     </main>
 
     <footer>
@@ -464,6 +464,8 @@
         <img src="/image/image footer/icon-x.png" class="logo" alt="x">
         <img src="/image/image footer/icon-whatsapp.jpg" class="logo" alt="whatsapp">
     </footer>
+    <script src="/js/like.js"></script>
+    <script src="/js/script.js"></script>
 
 </body>
 

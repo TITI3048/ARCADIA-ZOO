@@ -25,7 +25,8 @@ function validateForm(){
 }
 
 function validateMail(input){
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Remove this useless assignment to variable "emailRegex"
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const mailUser = input.value;
     if(mailUser.match(mailRegex)){
         input.classList.add("is-valid");

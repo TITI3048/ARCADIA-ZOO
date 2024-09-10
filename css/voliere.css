@@ -314,7 +314,8 @@ main {
 }
 
 .back {
-    background-color: #BCC678;
+    color: #fff;
+    background-color: #444343;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;

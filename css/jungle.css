@@ -229,7 +229,7 @@ h2 {
     font-weight: bold;
     color: #000;
     text-align: center;
-    font-family: 'Consolas';
+    font-family: 'Consolas', sans-serif;
     padding-top: 20px;
     padding-bottom: 50px;
 }
@@ -239,14 +239,14 @@ h4 {
     font-weight: bold;
     color: #000000;
     text-align: center;
-    font-family: 'Consolas';
+    font-family: 'Consolas', sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 h3 {
     font-size: 30px;
-    font-family: 'Consolas';
+    font-family: 'Consolas', sans-serif;
     margin-top: 15px;
     margin-bottom: 15px;
     padding-bottom: 0px;
@@ -316,7 +316,8 @@ main {
     backface-visibility: hidden;
 }
 
-.back {color: #fff;
+.back {
+    color: #fff;
     background-color: #444343;
     transform: rotateY(180deg);
     display: flex;
