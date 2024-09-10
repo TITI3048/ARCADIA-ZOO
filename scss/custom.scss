@@ -1,15 +1,13 @@
+/* Option A: Include all of Bootstrap */
 
-
-/* Wrap the variable declaration inside a CSS rule or selector */
+/* Include any default variable overrides here (though functions won't be available)*/
 :root {
---primary: #C28165;
---secondary: #e4d2a1;
---dark: #392c1e;
---black: #000;
---font-family-sans-serif: "comic sans ms", sans-serif ;
---font-family-serif: "apple chancery", serif ;
-
+--primary-color: #C28165;
+--secondary-color: #e4d2a1;
+--dark-color: #444343;
+--black-color: #000000;
+--font-family-sans-serif: "Montserrat", sans-serif;
+--font-family-serif: "snell roundhand", serif;
 }
-
 
 @import "../node_modules/bootstrap/scss/bootstrap";

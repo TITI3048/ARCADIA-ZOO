@@ -1,14 +1,6 @@
 @charset "UTF-8";
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 /* Wrap the variable declaration inside a CSS rule or selector */
-:root {
-  --primary: #C28165;
-  --secondary: #e4d2a1;
-  --dark: #392c1e;
-  --black: #000;
-  --font-family-sans-serif: "comic sans ms", sans-serif ;
-  --font-family-serif: "apple chancery", serif ;
-}
 
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
