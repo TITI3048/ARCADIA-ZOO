@@ -43,7 +43,8 @@ body {
 
 .h1 {
     font-size: 100px;
-    font-family: 'Consolas', sans-serif;
+    font-weight: 800;
+    font-family: "Comic sans ms", sans-serif;
 }
 
 .image {
@@ -180,9 +181,16 @@ nav>ul>li:hover>a {
 .presentation {
     font-size: 25px;
     text-align: center;
+
+}
+
+p {
+    font-family: "Apple Chancery", cursive; 
+    
 }
 
 h4 {
+    font-family: "Comic sans ms", sans-serif;
     font-size: 30px;
     text-align: center;
     margin-right: 300px;
@@ -215,9 +223,9 @@ h4 {
 .back h2 {
 
     color: #000000;
-    font-family: 'Consolas', sans-serif;
+    font-family: "Comic sans ms", sans-serif;
     font-size: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     padding-top: 50px;
     text-shadow: #4064f6 2px 7px 2px;
 }
@@ -318,11 +326,9 @@ h4 {
     }
 }
 
-
-
 h3 {
     color: #fff;
-    font-family: 'Consolas', sans-serif;
+    font-family: "Comic sans ms", sans-serif;
     font-size: 30px;
     padding-bottom: 50px;
     padding-top: 10px;
@@ -484,10 +490,10 @@ h3 {
 
 .modale_close {
     position: absolute;
+    font-size: x-large;
     right: 280px;
     top: 90px;
     color: red;
-    text-decoration: none;
 }
 
 /*fin de mon main*/
