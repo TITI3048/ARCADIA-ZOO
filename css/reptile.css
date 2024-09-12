@@ -36,7 +36,7 @@
 
 .h1 {
     font-size: 90px;
-    font-family: 'Consolas', sans-serif;
+    font-family: "Comic sans ms", sans-serif;
 }
 
 .image {
@@ -164,6 +164,10 @@ nav >ul > li:hover >a {
 }
 /* debut de mon main*/
 
+p {
+    font-family: "Apple Chancery", cursive;
+}
+
 .text {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -229,7 +233,7 @@ h2 {
     font-weight: bold;
     color: #000000;
     text-align: center;
-    font-family: 'Consolas';
+    font-family: "Comic sans ms", sans-serif;
     padding-top: 20px;
     padding-bottom: 50px;
 }
@@ -239,7 +243,7 @@ h4 {
     font-weight: bold;
     color: #000000;
     text-align: center;
-    font-family: 'Consolas';
+    font-family: "Comic sans ms", sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -247,6 +251,7 @@ h4 {
 h3 {
     margin-top: 0px;
     padding-bottom: 0px;
+    font-family: "Comic sans ms", sans-serif;
 }
 
 main {
