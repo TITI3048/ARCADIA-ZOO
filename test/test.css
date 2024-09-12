@@ -9,7 +9,6 @@ body {
 .zoo {
     width: 100%;
     height: 150px;
-    text-align: center;
     background-color: #C28165;
 }
 
@@ -44,14 +43,9 @@ body {
 }
 
 .h1 {
-    font-size: 90px;
-    font-family: 'arial', sans-serif;
-    background-color: url('/test/spectre-eclairs-lumiere-coloree_2.jpg');
-    background-size: cover;
-    background-position: center;
-    -webkit-background-clip: h1;
-    color: transparent;
-
+    font-size: 100px;
+    font-weight: 800;
+    font-family: "Comic sans ms", sans-serif;
 }
 
 .image {
@@ -183,130 +177,49 @@ nav>ul>li:hover>a {
     animation: apparitionSousMenu 1s forwards;
 }
 
-.A {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-
-h3 {
-    color: #fff;
-    font-family: 'Consolas', sans-serif;
-    font-size: 30px;
-    padding-bottom: 50px;
-    padding-top: 10px;
-}
-
-.button {
-    margin-bottom: 10px;
-    font-size: 20px;
-    margin-top: 10px;
-    text-decoration: none;
-    background-color: #ffffff;
-}
+/*debut de mon footer*/
 
 
-.horaire {
-    background-color: #e4d2a1;
-    width: 750px;
-    height: 500px;
-    padding-top: 100px;
-    list-style: none;
-    border: 3px solid #535252;
-}
 
-.contact {
-    font-size: 25px;
-    font-family: 'Consolas', sans-serif;
-    margin-bottom: 20px;
-}
-
-.p1 {
-    padding-bottom: 30px;
-}
-
-.avis {
-    background-color: #000;
-    width: 750px;
-    padding-bottom: 20px;
-    border: 3px solid #535252;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-.avis1 {
-    width: 350px;
-    height: 350px;
-    background: rgb(31, 31, 31);
-    position: relative;
-}
-
-.avis1::before
-.avis1::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(45deg,
-    #ff0000, #00f0f0, #00ff00, #0000ff,
-    #ff0000, #00f0f0, #00ff00, #0000ff,
-    #f00f0f);
+footer {
     width: 100%;
-    height: 100%;
-    background-size: 500%;
-    z-index: -1;
-    transform: scale(1.02);
-}
-
-.etoile {
-    width: 100px;
-}
-
-.plan-site {
-    text-decoration: none;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
+    height: 80px;
+    background-color: #C28165;
     color: #000000;
-    border: solid 3px #000000;
-    margin-left: 20px;
-}
-
-.modale {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(77, 77, 77, .7);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.modale:target {
-    visibility: visible;
-    opacity: 1;
+.contener {
+    margin-left: 10px;
 }
 
-.modale_content {
-    padding: 1.5em 2em;
-    width: 800px;
-    max-width: 90%;
-    border: 15px;
-    position: relative;
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 
-.modale_close {
-    position: absolute;
-    right: 280px;
-    top: 90px;
-    color: red;
-    text-decoration: none;
+/*fin de mon footer*/
+
+@media (max-width:800px) and (min-width: 150px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media (max-width:800px) and (min-width: 150px) {
+    .marquee-rtl {
+        display: none;
+    }
+}
+
+@media (max-width:800px) and (min-width: 150px) {
+    .image {
+        width: auto;
+    }
 }
