@@ -1,23 +1,35 @@
+let slideIndex = 1;
+showSlides(slideIndex);
 
-
-let modablesimg = document.querySelectorAll('.modablesimg');
-
-for (let i =0; i < modablesimg.length; i++) {
-    modablesimg[i].addEventListener('click', function() {
-        generateModal(modablesimg[i].src, modalesimg[i].getattribute("data-modal-captation"));
-    });
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-function generateModal(src, caption) 
-{
-let div = document.createElement('div');
-let img = document.createElement('img');
-let close = document.createElement('span');
-let text = document.createElement('span');
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
-text.innerHTML = caption;
-close.innerHTML = "&times;";
-img.src = src;
-div.append(img, close,text);
-document.body.appendChild(div);
+function showSlides(n) {
+    let slides = document.getElementsByClassName('slides');
+    let dots = document.getElementsByClassName('dot');
+    
+    if(n > slides.length) { slideIndex = 1 }
+    
+    if(n < 1 ) { slideIndex = slides.length }
+    
+    // Cacher toutes les slides
+    for(let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    // Retirer "active" de tous les points
+    for(let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
+    }
+    
+    // Afficher la slide demandée
+    slides[slideIndex - 1].style.display = 'block';
+    
+    // Ajouter "active" sur le point cliqué
+    dots[slideIndex - 1].classList.add('active');
 }
