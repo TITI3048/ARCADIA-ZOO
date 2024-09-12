@@ -578,5 +578,40 @@ footer {
     }
 }
 
-
+@media (max-width: 1120px) {
+    .container-3d {
+    width: 100%;
+    height: auto;
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .card {
+    width: 100%;
+    height: auto;
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .front, .back {
+    width: 100%;
+    height: auto;
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .image1 {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .front-content, .back-content {
+    transform: none;
+    }
+  }
 
