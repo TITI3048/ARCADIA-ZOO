@@ -1,179 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    height: 100vh;
-    --primary: hsl(58, 86%, 89%);
-    --secondary: hsl(86, 93%, 73%);
-    background: linear-gradient(70deg, var(--primary), var(--secondary));
-}
-
-.zoo {
-    width: 100%;
-    height: 150px;
-    background-color: #C28165;
-}
-
-.marquee-rtl {
-    max-width: 100%;
-    padding-top: 25px;
-    margin: 0 auto;
-    border: 10px solid #f0f0ff;
-    overflow: hidden;
-    box-shadow: 0 .25em .5em #ccc, inset 0 0 .1em .25em #ccc;
-}
-
-.marquee-rtl> :first-child {
-    display: inline-block;
-    padding-right: 2em;
-    padding-left: 100%;
-    white-space: nowrap;
-    animation-name: defilement-rtl;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes defilement-rtl {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(-100%, 0, 0);
-    }
-}
-
-.h1 {
-    font-size: 100px;
-    font-weight: 800;
-    font-family: "Comic sans ms", sans-serif;
+    background: url(/image/image-accueil/fond-feuillage-tropical_53876-91352.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
 }
 
 .image {
     width: 300px;
-    height: 213px;
-    float: left;
+    height: 200px;
+    border-radius: 50%
 }
 
-:root {
-    --hauteur-menu: 60px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-nav {
-    width: 100%;
-    font-size: 18px;
-    position: sticky;
-    top: 0;
-}
-
-nav>ul {
+header {
     display: flex;
-    text-align: center;
-    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-    height: var(--hauteur-menu);
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav>ul>li {
-    background-color: white;
-    position: relative;
-    height: 100%;
-    flex: 1;
-}
-
-nav>ul>li>a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-li a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-
-.menu-deroulant>a::after {
-    content: ">";
-    font-size: 15px;
-    margin-left: 7px;
-    display: inline-block;
-    cursor: pointer;
-
-}
-
-.sous-menu {
-    margin-top: var(--hauteur-menu);
-    width: 100%;
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    max-height: 0;
-}
-
-.sous-menu>li>a {
-    height: 50px;
-    padding-left: 20px;
-    width: 100%;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 5%;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+
+
+}
+ul {
+    list-style: none;
     display: flex;
 }
-
-nav>ul>li:hover>a {
-    color: #C28165;
+ul li {
+    margin: 0 10px;
 }
-
-.sous-menu>li:hover {
-    background-color: #C28165;
+a {
+    text-decoration: none;
+    color:#fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.5s;
+    border-radius: 6px;
 }
-
-.sous-menu>li:hover>a {
-    color: white;
-}
-
-@keyframes rotationfleche {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(90deg);
-    }
-
-}
-
-.menu-deroulant:hover>a:after {
-    animation: rotationfleche 0.2s linear forwards;
-}
-
-@keyframes apparitionSousMenu {
-    0% {
-        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
-        border-top: 3px solid #C28165;
-    }
-
-    30% {
-        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
-    }
-
-    100% {
-        max-height: 50em;
-        border-top: 3px solid #C28165;
-        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
-    }
-}
-
-.menu-deroulant:hover>.sous-menu {
-    animation: apparitionSousMenu 1s forwards;
+a:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 /* debut de mon main*/
@@ -188,6 +57,7 @@ nav>ul>li:hover>a {
 
 p {
     font-family: "Apple Chancery", cursive; 
+    color: #fff;
     
 }
 
@@ -196,7 +66,7 @@ h4 {
     font-size: 30px;
     text-align: center;
     margin-right: 300px;
-    
+    color: #fff;
 }
 
 .front,
@@ -346,7 +216,8 @@ h3 {
 
 .avis, .horaire {
     text-align: center;
-    background-color: #e4d2a1;
+    background: url(/image/image-accueil/arbre-photorealiste-branches-tronc-exterieur-dans-nature_23-2151478131.jpg);
+    background-size: cover;
     width: 100%;
     flex: 1; /* Chaque section occupe une part égale de l'espace disponible */
     padding: 20px;
@@ -362,7 +233,7 @@ h3 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 30px;
-    color: #535252;
+    color: #fff;
 }
 
 /* Style pour les bulles d'avis */
@@ -511,18 +382,79 @@ footer {
 
 /*fin de mon footer*/
 
-@media (max-width:800px) and (min-width: 150px) {
-    .menu {
-        display: none;
+@media screen and (max-width: 1037px) {
+    body {
+        position: relative;
     }
-}
 
-@media (max-width:800px) and (min-width: 150px) {
-    .marquee-rtl {
-        display: none;
+    ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -1500px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: 0.5s;
+        backdrop-filter: blur(10px);
+        
     }
-}
+    ul li {
+        margin: 20px 0;
+    }
+    ul li a{
 
+        text-transform: uppercase;
+
+    }
+    ul li a:hover{
+        color: #fff;
+    }
+    
+    .button{
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .button::after{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 0 #000 ;
+        transition: 0.5s;
+    }
+    .button.active::after{
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #000 ;
+    }
+    .button::before{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .button.active::before{
+        transform: rotate(-45deg);
+    }
+    ul.active {
+        left :0 ;
+    }
+    
+}
 
 @media (max-width:800px) and (min-width: 150px) {
     .container-3d .card {
