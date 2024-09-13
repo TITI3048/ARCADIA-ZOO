@@ -12,7 +12,7 @@ if (!isset($_SESSION['username'])) {
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "votre_base_de_donnees";
+$dbname = "arcadia zoo";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
