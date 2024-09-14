@@ -1,51 +1,50 @@
 <?php
+$servername = "localhost";
+$username = "root"; // Remplacez par votre nom d'utilisateur MySQL
+$password = ""; // Remplacez par votre mot de passe MySQL
+$dbname = "arcadia-zoo";
 
-session_start();
+// Créer une connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Vérifier si le formulaire a été soumis
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("La connexion a échoué: " . $conn->connect_error);
+}
+
+// Si le formulaire est soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Connexion à la base de données
-    $servername = "localhost";
-    $db_username = "root";
-    $db_password = "";
-    $dbname = "arcadia zoo";
+    // Préparer et lier
+    $stmt = $conn->prepare("SELECT * FROM admin WHERE username = ?");
+    $stmt->bind_param("s", $username);
 
-    $conn = new mysqli($servername, $db_username, $db_password, $dbname);
-
-    // Vérifier la connexion
-    if ($conn->connect_error) {
-        die("Échec de la connexion : " . $conn->connect_error);
-    }
-
-    // Préparer et exécuter la requête SQL
-    $sql = "SELECT * FROM utilisateurs WHERE username = ? AND password = ?";
-    $stmt = $conn->prepare($sql);
-    if ($stmt === false) {
-        die("Erreur de préparation de la requête : " . $conn->error);
-    }
-    $stmt->bind_param("ss", $username, $password);
+    // Exécuter la requête
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Vérifier si les informations d'identification sont correctes
+    // Vérifier si l'utilisateur existe et si le mot de passe est correct
     if ($result->num_rows > 0) {
-        // Stocker les informations de l'utilisateur dans la session
-        $_SESSION['username'] = $username;
-        // Rediriger vers dashboard.php
-        header("Location: dashboard.php");
-        exit();
+        $user = $result->fetch_assoc();
+        if (password_verify($password, $user['password'])) {
+            // Rediriger vers dashboard.php après une connexion réussie
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            echo "Mot de passe incorrect";
+        }
     } else {
-        echo "Nom d'utilisateur ou mot de passe incorrect.";
+        echo "Nom d'utilisateur incorrect";
     }
 
-    // Fermer la connexion
+    // Fermer la déclaration
     $stmt->close();
-    $conn->close();
 }
+
+// Fermer la connexion
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -69,8 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form>
             <div class="lien">
                 <a href="iscription.html">Créer un compte</a>
-            </div>
-            <div class="lien">
+                <br>
                 <a href="accueil.html">Retour à l'accueil</a>
             </div>
         </form>

@@ -442,10 +442,9 @@ footer {
         position: absolute;
         width: 35px;
         height: 2px;
-        background-color: #fff;
+        background-color: #000;
         transform: translateY(10px);
         transition: 0.5s;
-        display: none;
     }
     .button.active::before{
         transform: rotate(-45deg);

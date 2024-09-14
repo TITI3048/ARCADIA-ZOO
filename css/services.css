@@ -257,21 +257,21 @@ footer {
         position: absolute;
         width: 35px;
         height: 2px;
-        background-color: #000;
+        background-color: #fff;
         transform: translateY(-10px);
-        box-shadow: 0 10px 0 #000 ;
+        box-shadow: 0 10px 0 #fff ;
         transition: 0.5s;
     }
     .button.active::after{
         transform: rotate(45deg);
-        box-shadow: 0 0 0 #000 ;
+        box-shadow: 0 0 0 #fff ;
     }
     .button::before{
         content: "";
         position: absolute;
         width: 35px;
         height: 2px;
-        background-color: #000;
+        background-color: #fff;
         transform: translateY(10px);
         transition: 0.5s;
     }
