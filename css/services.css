@@ -51,10 +51,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     margin: 10px 10px 10px 10px;
-    border: solid 3px #fff;
     padding-top: 20px;
     align-items: center;
-
     border-radius: 10px;
 }
 
@@ -88,8 +86,8 @@ h2 {
     padding-top: 20px;
     padding-bottom: 20px;
     font-family: "Comic sans ms", sans-serif;
-    color: #fff;
-    text-shadow: 2px 4px 2px rgb(27, 233, 252);
+    color: #000000;
+    text-shadow: 2px 4px 2px #fff;
 }
 
 h3 {
@@ -135,7 +133,6 @@ h4 {
 
 .aventure {
     color: #fff;
-    border: solid 3px #fff;
     width: 45%;
     margin-left: auto;
     margin-right: auto;
@@ -144,12 +141,14 @@ h4 {
     text-align: center;
     font-size: 18px;
     padding-bottom: 20px;
+
 }
 
 .safari {
     border: solid 3px #000000;
     margin: 10px 10px 10px 10px;
     border-radius: 10px;
+    background: url(/image/image-services/belle-girafe-dans-nature_23-2151708875.jpg);
 }
 
 .visite-guide {
