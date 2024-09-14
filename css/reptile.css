@@ -36,7 +36,7 @@
 
 .h1 {
     font-size: 90px;
-    font-family: 'Consolas', sans-serif;
+    font-family: "Comic sans ms", sans-serif;
 }
 
 .image {
@@ -164,6 +164,10 @@ nav >ul > li:hover >a {
 }
 /* debut de mon main*/
 
+p {
+    font-family: "Apple Chancery", cursive;
+}
+
 .text {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -188,6 +192,7 @@ nav >ul > li:hover >a {
         border: none;
         grid-column: 3/4;
         grid-row: 2/3;
+        font-size: 18px;
     }
     
     .texte2 {
@@ -195,7 +200,7 @@ nav >ul > li:hover >a {
         height: 350px;
         border: 3px solid #535252;
         border: none;
-        
+        font-size: 18px;
     }
     
     .texte0 {
@@ -205,6 +210,7 @@ nav >ul > li:hover >a {
         border: none;
         grid-column: 2/3;
         grid-row: 1/2;
+        font-size: 18px;
     }
     
     .reptile {
@@ -229,7 +235,7 @@ h2 {
     font-weight: bold;
     color: #000000;
     text-align: center;
-    font-family: 'Consolas';
+    font-family: "Comic sans ms", sans-serif;
     padding-top: 20px;
     padding-bottom: 50px;
 }
@@ -239,7 +245,7 @@ h4 {
     font-weight: bold;
     color: #000000;
     text-align: center;
-    font-family: 'Consolas';
+    font-family: "Comic sans ms", sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -247,6 +253,7 @@ h4 {
 h3 {
     margin-top: 0px;
     padding-bottom: 0px;
+    font-family: "Comic sans ms", sans-serif;
 }
 
 main {
