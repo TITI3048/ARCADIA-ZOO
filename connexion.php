@@ -68,13 +68,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section>
         <form>
             <div class="lien">
-                <a href="/pages/iscription.html">Créer un compte</a>
+                <a href="iscription.html">Créer un compte</a>
             </div>
             <div class="lien">
-                <a href="/pages/accueil.html">Retour à l'accueil</a>
+                <a href="accueil.html">Retour à l'accueil</a>
             </div>
         </form>
     </section>
 </body>
-<script src="/js/script.js"></script>
 </html>
