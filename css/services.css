@@ -1,168 +1,49 @@
-.zoo {
-    width: 100%;
-    height: 150px;
-    text-align: center;
-    background-color: #C28165;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.marquee-rtl {
-    max-width: 90em;
-    padding-top: 25px;
-    margin: 0 auto;
-    border: 10px solid #f0f0ff;
-    overflow: hidden;
-    box-shadow: 0 .25em .5em #ccc, inset 0 0 .1em .25em #ccc;
-}
-
-.marquee-rtl > :first-child {
-    display: inline-block;
-    padding-right: 2em;
-    padding-left: 100%;
-    white-space: nowrap;
-    animation-name: defilement-rtl;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes defilement-rtl {
-    0% {
-        transform: translate3d(0,0,0);
-    }
-    100% {
-        transform: translate3d(-100%,0,0);
-    }
-}
-
-.h1 {
-    font-size: 90px;
-    font-family: "Comic sans ms", sans-serif;
+body {
+    background: url(/image/image-accueil/fond-feuillage-tropical_53876-91352.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
 }
 
 .image {
     width: 300px;
-    height: 213px;
-    float: left;
+    height: 200px;
+    border-radius: 50%
 }
 
-:root {
-    --hauteur-menu: 60px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-nav {
-    width: 100%;
-    font-size: 18px;
-    position: sticky;
-    top: 0;
-}
-
-nav > ul {
+header {
     display: flex;
-    text-align: center;
-    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.3);
-    height: var(--hauteur-menu);
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav > ul > li {
-    background-color: white;
-    position: relative;
-    height: 100%;
-    flex: 1;
-}
-
-nav > ul > li > a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-li a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu-deroulant > a::after{
-    content: ">";
-    font-size: 15px;
-    margin-left: 7px;
-    display: inline-block;
-}
-
-.sous-menu {
-    margin-top: var(--hauteur-menu);
-    width: 100%;
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    max-height: 0;
-}
-
-.sous-menu > li >a {
-    height: 50px;
-    padding-left: 20px;
-    width: 100%;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 5%;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+
+
+}
+ul {
+    list-style: none;
     display: flex;
 }
-
-nav >ul > li:hover >a {
-    color: #C28165;
+ul li {
+    margin: 0 10px;
 }
-
-.sous-menu >li:hover {
-    background-color: #C28165;
+a {
+    text-decoration: none;
+    color:#fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.5s;
+    border-radius: 6px;
 }
-
-.sous-menu > li:hover > a {
-    color: white;
+a:hover {
+    background-color: #000;
+    color: #fff;
 }
-
-@keyframes rotationfleche {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(90deg);
-    }
-    
-}
-
-.menu-deroulant:hover > a:after {
-    animation: rotationfleche 0.2s linear forwards;
-}
-
-@keyframes apparitionSousMenu {
-    0% {
-        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0);
-        border-top: 3px solid #C28165;
-    }
-    30% {
-        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
-    }
-
-    100% {
-        max-height: 50em;
-        border-top: 3px solid #C28165;
-        box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.3);
-    }
-}
-
-.menu-deroulant:hover > .sous-menu {
-    animation: apparitionSousMenu 1s forwards;
-}
-
 
 /*debut de mon main*/
 
@@ -170,10 +51,10 @@ nav >ul > li:hover >a {
     display: flex;
     flex-direction: column;
     margin: 10px 10px 10px 10px;
-    border: solid 3px #000000;
+    border: solid 3px #fff;
     padding-top: 20px;
     align-items: center;
-    background: #e4d2a1;
+
     border-radius: 10px;
 }
 
@@ -193,14 +74,13 @@ p {
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #C28165;
     width: 900px;
     height: 500px;
     font-family: "Apple Chancery", cursive;
     text-align: center;
     font-weight: 500;
     font-size: 18px;
-    border: 3px solid #535252;
+    color: #fff;
 }
 
 h2 {
@@ -208,8 +88,8 @@ h2 {
     padding-top: 20px;
     padding-bottom: 20px;
     font-family: "Comic sans ms", sans-serif;
-    color: #000000;
-    text-shadow: 2px 4px 2px #ffffff;
+    color: #fff;
+    text-shadow: 2px 4px 2px rgb(27, 233, 252);
 }
 
 h3 {
@@ -217,8 +97,8 @@ h3 {
     padding-top: 40px;
     padding-bottom: 50px;
     font-family: "Comic sans ms", sans-serif;
-    color: #000000;
-    text-shadow: 2px 4px 2px #ffffff;
+    color: #fff;
+    text-shadow: 2px 4px 2px rgb(27, 233, 252);
 }
 
 h4 {
@@ -254,8 +134,8 @@ h4 {
 }
 
 .aventure {
-    background-color: #BCC678;
-    border: solid 3px #000000;
+    color: #fff;
+    border: solid 3px #fff;
     width: 45%;
     margin-left: auto;
     margin-right: auto;
@@ -267,7 +147,6 @@ h4 {
 }
 
 .safari {
-    background-color: #e4d2a1;
     border: solid 3px #000000;
     margin: 10px 10px 10px 10px;
     border-radius: 10px;
@@ -332,3 +211,76 @@ footer {
 
 /*fin de mon footer*/
 
+@media screen and (max-width: 1037px) {
+    body {
+        position: relative;
+    }
+
+    ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -1500px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: 0.5s;
+        backdrop-filter: blur(10px);
+        
+    }
+    ul li {
+        margin: 20px 0;
+    }
+    ul li a{
+
+        text-transform: uppercase;
+
+    }
+    ul li a:hover{
+        color: #fff;
+    }
+    
+    .button{
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .button::after{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 0 #000 ;
+        transition: 0.5s;
+    }
+    .button.active::after{
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #000 ;
+    }
+    .button::before{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .button.active::before{
+        transform: rotate(-45deg);
+    }
+    ul.active {
+        left :0 ;
+    }
+    
+}
