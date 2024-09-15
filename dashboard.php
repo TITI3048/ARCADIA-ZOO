@@ -97,7 +97,7 @@ if (isset($_POST['delete_animal'])) {
                     <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Déconnexion</a>
+                    <a class="nav-link" href="deconnexion.php">Déconnexion</a>
                 </li>
             </ul>
         </div>
@@ -150,50 +150,4 @@ if (isset($_POST['delete_animal'])) {
                 </form>
                 <form method="post" action="dashboard.php" class="mt-3">
                     <div class="form-group">
-                        <label for="service_id">ID du service à retirer :</label>
-                        <input type="number" class="form-control" id="service_id" name="service_id" required>
-                    </div>
-                    <button type="submit" class="btn btn-danger" name="delete_service">Retirer Service</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Section Animaux -->
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <h2>Gérer les Animaux</h2>
-                <form method="post" action="dashboard.php">
-                    <div class="form-group">
-                        <label for="animal_name">Nom de l'animal :</label>
-                        <input type="text" class="form-control" id="animal_name" name="animal_name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="species">Espèce :</label>
-                        <input type="text" class="form-control" id="species" name="species" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="add_animal">Ajouter Animal</button>
-                </form>
-                <form method="post" action="dashboard.php" class="mt-3">
-                    <div class="form-group">
-                        <label for="animal_id">ID de l'animal à retirer :</label>
-                        <input type="number" class="form-control" id="animal_id" name="animal_id" required>
-                    </div>
-                    <button type="submit" class="btn btn-danger" name="delete_animal">Retirer Animal</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Pied de page -->
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container">
-            <span class="text-muted">© 2023 Mon Dashboard. Tous droits réservés.</span>
-        </div>
-    </footer>
-
-    <!-- Inclure les scripts de Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+                        <label for="service_id
