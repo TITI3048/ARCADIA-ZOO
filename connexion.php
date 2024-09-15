@@ -30,10 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: dashboard.php");
             exit();
         } else {
-            echo "Mot de passe incorrect";
+            $error = "Mot de passe incorrect";
         }
     } else {
-        echo "Nom d'utilisateur incorrect";
+        $error = "Nom d'utilisateur incorrect";
     }
 
     $stmt->close();
@@ -47,27 +47,28 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="connexion.css">
+    <link rel="stylesheet" href="/css/connexion.css">
     <title>Connexion</title>
 </head>
 <body>
-    <form method="post" action="connexion.php">
-        <label for="username">Nom d'utilisateur :</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Se connecter</button>
-    </form>
-    <section>
-        <form>
+    <div class="login-container">
+        <form method="post" action="connexion.php">
+            <?php if (isset($error)): ?>
+                <div class="error"><?php echo $error; ?></div>
+            <?php endif; ?>
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Se connecter</button>
             <div class="lien">
                 <a href="iscription.html">Créer un compte</a>
                 <br>
                 <a href="accueil.html">Retour à l'accueil</a>
             </div>
         </form>
-    </section>
+    </div>
 </body>
 </html>

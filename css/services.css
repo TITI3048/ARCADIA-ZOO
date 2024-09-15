@@ -149,6 +149,8 @@ h4 {
     margin: 10px 10px 10px 10px;
     border-radius: 10px;
     background: url(/image/image-services/belle-girafe-dans-nature_23-2151708875.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .visite-guide {
