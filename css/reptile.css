@@ -169,65 +169,76 @@ p {
 }
 
 .text {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        background: linear-gradient(to left , #f9fbb5, #34ae71b8);
-        width: 81%;
-        height: 700px;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        border: 3px solid #535252;
-        display: grid;
-        grid-template-columns: repeat(3 , 1fr);
-        grid-template-rows: repeat(2 , 1fr);
-    }
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-linear-gradient(to left , #f9fbb5, #34ae71b8); 
+    background: linear-gradient(to left , #f9fbb5, #34ae71b8); 
+    width: 84%;
+    height: 700px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: 3px solid #535252;
+    display: -ms-grid; 
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr; 
+    grid-template-columns: repeat(3 , 1fr);
+    -ms-grid-rows: 1fr 1fr; 
+    grid-template-rows: repeat(2 , 1fr);
+}
 
-    .texte1 {
-        width: 400px;
-        height: 350px;
-        border: 3px solid #535252;
-        border: none;
-        grid-column: 3/4;
-        grid-row: 2/3;
-        font-size: 18px;
-    }
-    
-    .texte2 {
-        width: 400px;
-        height: 350px;
-        border: 3px solid #535252;
-        border: none;
-        font-size: 18px;
-    }
-    
-    .texte0 {
-        width: 410px;
-        height: 350px;
-        border: 3px solid #535252;
-        border: none;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        font-size: 18px;
-    }
-    
-    .reptile {
-        width: 410px;
-        height: 350px;
-    }
-    .reptile2 {
-        width: 410px;
-        height: 350px;
-    }
-    
-    .reptile3 {
-        width: 410px;
-        height: 350px;
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
+.texte1 {
+    width: 400px;
+    height: 350px;
+    border: 3px solid #535252;
+    border: none;
+    -ms-grid-column: 3; 
+    grid-column: 3/4;
+    -ms-grid-row: 2; 
+    grid-row: 2/3;
+    font-size: 18px;
+}
+
+.texte2 {
+    width: 400px;
+    height: 350px;
+    border: 3px solid #535252;
+    border: none;
+    font-size: 18px;
+}
+
+.texte0 {
+    width: 410px;
+    height: 350px;
+    border: 3px solid #535252;
+    border: none;
+    -ms-grid-column: 2; 
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    grid-row: 1/2;
+    font-size: 18px;
+}
+
+.reptile {
+    width: 410px;
+    height: 350px;
+}
+
+.reptile2 {
+    width: 410px;
+    height: 350px;
+}
+
+.reptile3 {
+    width: 410px;
+    height: 350px;
+    -ms-grid-column: 2; 
+    grid-column: 2/3;
+    -ms-grid-row: 2; 
+    grid-row: 2/3;
+}
     
 
 h2 {
