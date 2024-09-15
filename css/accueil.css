@@ -7,6 +7,7 @@ body {
     background: url(/image/image-accueil/fond-feuillage-tropical_53876-91352.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh; 
 }
 
@@ -208,9 +209,9 @@ h3 {
 .content-wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Espace entre les deux sections */
+    gap: 20px; 
     width: 100%;
-    max-width: 1500px; /* Largeur maximale globale pour les deux sections ensemble */
+    max-width: 1500px; 
 }
 
 .avis, .horaire {
@@ -218,11 +219,11 @@ h3 {
     background: url(/image/image-accueil/arbre-photorealiste-branches-tronc-exterieur-dans-nature_23-2151478131.jpg);
     background-size: cover;
     width: 100%;
-    flex: 1; /* Chaque section occupe une part égale de l'espace disponible */
+    flex: 1; 
     padding: 20px;
     border: 3px solid #535252;
     border-radius: 15px;
-    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur totale */
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -252,17 +253,16 @@ h3 {
 .avis-bubble::after {
     content: "";
     position: absolute;
-    bottom: -20px; /* Ajustez pour placer la flèche de la bulle */
+    bottom: -20px; 
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 15px solid #fff; /* Couleur de la bulle */
+    border-top: 15px solid #fff; 
 }
 
-/* Style pour le contenu de l'avis */
 .avis-content {
     display: flex;
     flex-direction: column;
@@ -285,7 +285,6 @@ h3 {
     text-align: center;
 }
 
-/* Style pour le bouton */
 .button {
     display: inline-block;
     margin-top: 20px;

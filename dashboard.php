@@ -113,6 +113,9 @@ if (isset($_POST['delete_animal'])) {
             <li class="nav-item">
                 <a class="nav-link" href="deconnexion.php">Déconnexion</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="accueil.html">Retour au Site</a>
+            </li>
         </ul>
     </div>
 </nav>
