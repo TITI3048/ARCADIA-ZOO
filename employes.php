@@ -91,9 +91,6 @@ $result = $conn->query($sql);
                 <li class="nav-item">
                     <a class="nav-link" href="dashboard.php">Accueil</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="employes.php">Employés <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="animaux.php">Animaux</a>
                 </li>
