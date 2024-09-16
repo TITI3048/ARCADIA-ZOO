@@ -52,7 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
     }
 }
 
+$selected_habitat = isset($_POST['filter_habitat']) ? $conn->real_escape_string($_POST['filter_habitat']) : '';
+
 $sql = "SELECT id, nom, habitat, espece, likes FROM animaux";
+if ($selected_habitat) {
+    $sql .= " WHERE habitat='$selected_habitat'";
+}
 $result = $conn->query($sql);
 ?>
 
@@ -118,6 +123,24 @@ $result = $conn->query($sql);
             <input type="text" class="form-control" id="espece" name="espece" required>
         </div>
         <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+
+    <h2 class="mt-5">Filtrer par Habitat</h2>
+    <form method="post" action="animaux.php">
+        <div class="form-group">
+            <label for="filter_habitat">Habitat:</label>
+            <select class="form-control" id="filter_habitat" name="filter_habitat">
+                <option value="">Tous</option>
+                <?php
+                $habitats = $conn->query("SELECT DISTINCT habitat FROM animaux");
+                while ($row = $habitats->fetch_assoc()) {
+                    $selected = $row['habitat'] == $selected_habitat ? 'selected' : '';
+                    echo "<option value='" . $row['habitat'] . "' $selected>" . $row['habitat'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Filtrer</button>
     </form>
 
     <h2 class="mt-5">Liste des Animaux</h2>
