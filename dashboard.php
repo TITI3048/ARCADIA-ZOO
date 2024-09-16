@@ -5,7 +5,6 @@ if (!isset($_SESSION['username'])) {
     header("Location: connexion.php");
     exit();
 }
-
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
@@ -23,6 +22,21 @@ $result = $conn->query($query);
 if (!$result) {
     die("Erreur dans la requête : " . $conn->error);
 }
+
+$query_top3 = 'SELECT nom, likes FROM animaux ORDER BY likes DESC LIMIT 3';
+$result_top3 = $conn->query($query_top3);
+
+$animaux = [];
+$likes = [];
+
+if ($result_top3->num_rows > 0) {
+    while($row = $result_top3->fetch_assoc()) {
+        $animaux[] = $row['nom'];
+        $likes[] = $row['likes'];
+    }
+} else {
+    echo "0 results";
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +51,7 @@ if (!$result) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <style>
     body {
@@ -53,6 +68,11 @@ if (!$result) {
     .content {
         margin-top: 20px;
     }
+
+    .chart-container {
+        width: 50%;
+        margin: auto;
+    }
 </style>
 
 <body>
@@ -63,9 +83,6 @@ if (!$result) {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="dashboard.php">Accueil</a>
-                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="employes.php">Employés <span class="sr-only">(current)</span></a>
                 </li>
@@ -109,6 +126,11 @@ if (!$result) {
             </table>
         </div>
 
+        <div class="container mb-5 chart-container">
+            <h2 class="mt-5">Top 3 des animaux les plus likés</h2>
+            <canvas id="pieChart"></canvas>
+        </div>
+
         <div class="container">
             <h2 class="mt-5">Calendrier</h2>
             <div id="calendar" class="mt-3 p-3 border rounded bg-light"></div>
@@ -126,6 +148,33 @@ if (!$result) {
                 editable: true,
                 events: [
                 ]
+            });
+
+            var ctx = document.getElementById('pieChart').getContext('2d');
+            var pieChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: <?php echo json_encode($animaux); ?>,
+                    datasets: [{
+                        data: <?php echo json_encode($likes); ?>,
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    return tooltipItem.label + ': ' + tooltipItem.raw + ' likes';
+                                }
+                            }
+                        }
+                    }
+                }
             });
         });
     </script>

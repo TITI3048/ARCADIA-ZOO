@@ -89,7 +89,7 @@ $result = $conn->query($sql);
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="dashboard.php">Accueil</a>
+                    <a class="nav-link" href="dashboard.php">Accueil Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="animaux.php">Animaux</a>
