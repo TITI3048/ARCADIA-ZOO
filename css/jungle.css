@@ -382,3 +382,142 @@ footer {
     }
     
 }
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .text {
+        width: 90%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .texte0, .texte1, .texte2 {
+        width: 100%;
+        height: auto;
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .jungle, .jungle1, .jungle3 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image {
+        width: 200px;
+        height: auto;
+    }
+
+    .button {
+        margin-top: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text {
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #board {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 450px; 
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .card .image, .card .image1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .box .icons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #board {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 350px; 
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .card .image, .card .image1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .box .icons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2, h3, h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button::after, .button::before {
+        width: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+}
