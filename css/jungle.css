@@ -172,11 +172,13 @@ main {
 }
 
 .card {
+    background: #34ae71a4;
     height: 700px;
     width: 450px;
     position: relative;
     transition: transform 3s;
     transform-style: preserve-3d;
+    border-radius: 25px;
 }
 
 .card .image {

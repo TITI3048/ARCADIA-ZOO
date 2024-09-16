@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: url(/image/image-reserve-africaine/savane-africaine-groupe-grands-elephants_822882-427624.jpg);
+    background: url(/image/image-reserve-africaine/vaste-savane-africaine-au-lever-du-soleil-arbre-imposant_1168612-575501.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -185,11 +185,13 @@ main {
 }
 
 .card {
+    background: #fae675a4;
     height: 700px;
     width: 450px;
     position: relative;
     transition: transform 3s;
     transform-style: preserve-3d;
+    border-radius: 25px;
 }
 
 .card .image {

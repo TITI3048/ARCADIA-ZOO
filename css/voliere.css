@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: url(/image/image-voliere/il-y-beaucoup-oiseaux-qui-volent-au-dessus-lac-au-coucher-du-soleil_1035767-13720.jpg);
+    background: url(/image/image-voliere/beau-paysage-ciel-dans-style-art-numerique_23-2151120844.avif);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -171,11 +171,13 @@ p {
     }
     
     .card {
+        background: #88e1fca4;
         height: 700px;
         width: 450px;
         position: relative;
         transition: transform 3s;
         transform-style: preserve-3d;
+        border-radius: 25px;
     }
     
     .card .image {
