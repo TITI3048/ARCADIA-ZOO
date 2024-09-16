@@ -141,7 +141,7 @@ $result = $conn->query($sql);
                             <td>" . $row["nom"]. "</td>
                             <td>" . $row["habitat"]. "</td>
                             <td>" . $row["espece"]. "</td>
-                            <td>" . $row["likes"]. "</td>
+                            <td class='like-count' data-id='" . $row["id"]. "'>" . $row["likes"]. "</td>
                             <td>
                                 <form method='post' action='animaux.php' style='display:inline;'>
                                     <input type='hidden' name='delete_id' value='" . $row["id"] . "'>
@@ -157,6 +157,35 @@ $result = $conn->query($sql);
         </tbody>
     </table>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.like-button').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var cardId = this.getAttribute('data-id');
+            var likeCountElement = document.querySelector('.like-count[data-id="' + cardId + '"]');
+            var likeCount = parseInt(likeCountElement.textContent);
+
+            fetch('update_likes.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ cardId: cardId, likeCount: likeCount + 1 })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    likeCountElement.textContent = likeCount + 1;
+                } else {
+                    alert('Erreur lors de la mise à jour des likes.');
+                }
+            });
+        });
+    });
+});
+</script>
+
 </body>
 </html>
 
