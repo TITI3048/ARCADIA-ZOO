@@ -4,12 +4,10 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "arcadia-zoo";
+$dbname = "arcadia_zoo";
 
-// Créer une connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Vérifier la connexion
 if ($conn->connect_error) {
     die("La connexion a échoué: " . $conn->connect_error);
 }
@@ -18,19 +16,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Préparer et exécuter la requête SQL
     $stmt = $conn->prepare("SELECT * FROM admin WHERE username = ? AND password = ?");
     $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Connexion réussie
         $_SESSION['username'] = $username;
         header("Location: dashboard.php");
         exit();
     } else {
-        // Connexion échouée
         $error = "Nom d'utilisateur ou mot de passe incorrect";
     }
 }

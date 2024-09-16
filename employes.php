@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
-$dbname = "arcadia-zoo";
+$dbname = "arcadia_zoo";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
@@ -101,7 +101,10 @@ $result = $conn->query($sql);
                     <a class="nav-link" href="services.php">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="deconnexion.php">Déconnexion</a>
+                    <a class="nav-link" href="connexion.php">Déconnexion</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="accueil.html">Retour au Site</a>
                 </li>
             </ul>
         </div>

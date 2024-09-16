@@ -1,30 +1,24 @@
 <?php
-// Configuration de la base de données
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ma_base_de_donnees";
+$dbname = "arcadia_zoo"; 
 
-// Connexion à la base de données
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Vérifier la connexion
 if ($conn->connect_error) {
     die("Connexion échouée: " . $conn->connect_error);
 }
 
-// Créer la base de données si elle n'existe pas
-$sql = "CREATE DATABASE IF NOT EXISTS ma_base_de_donnees";
+$sql = "CREATE DATABASE IF NOT EXISTS arcadia_zoo"; 
 if ($conn->query($sql) === TRUE) {
     echo "Base de données créée avec succès ou déjà existante.";
 } else {
     die("Erreur lors de la création de la base de données: " . $conn->error);
 }
 
-// Sélectionner la base de données
-$conn->select_db("ma_base_de_donnees");
+$conn->select_db("arcadia_zoo"); 
 
-// Création de la table si elle n'existe pas
 $sql = "CREATE TABLE IF NOT EXISTS animaux (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(30) NOT NULL,
@@ -34,11 +28,10 @@ $sql = "CREATE TABLE IF NOT EXISTS animaux (
 )";
 $conn->query($sql);
 
-// Traitement du formulaire d'ajout
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nom'])) {
-    $nom = $_POST['nom'];
-    $habitat = $_POST['habitat'];
-    $espece = $_POST['espece'];
+    $nom = $conn->real_escape_string($_POST['nom']);
+    $habitat = $conn->real_escape_string($_POST['habitat']);
+    $espece = $conn->real_escape_string($_POST['espece']);
 
     $sql = "INSERT INTO animaux (nom, habitat, espece) VALUES ('$nom', '$habitat', '$espece')";
     if ($conn->query($sql) === TRUE) {
@@ -48,9 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nom'])) {
     }
 }
 
-// Traitement du formulaire de suppression
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
-    $delete_id = $_POST['delete_id'];
+    $delete_id = $conn->real_escape_string($_POST['delete_id']);
 
     $sql = "DELETE FROM animaux WHERE id='$delete_id'";
     if ($conn->query($sql) === TRUE) {
@@ -60,7 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_id'])) {
     }
 }
 
-// Récupération des données
 $sql = "SELECT id, nom, habitat, espece, likes FROM animaux";
 $result = $conn->query($sql);
 ?>
@@ -73,7 +64,47 @@ $result = $conn->query($sql);
     <title>Animaux</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<style>
+    body {
+        background-color: #2980b9 ;
+    }
+
+    .container {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Mon Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="employes.php">Employés</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="animaux.php">Animaux</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="services.php">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="connexion.php">Déconnexion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="accueil.html">Retour au Site</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <h2 class="mt-5">Ajouter un Animal</h2>
     <form method="post" action="animaux.php">
