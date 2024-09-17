@@ -4,15 +4,12 @@ $username = "root";
 $password = "";
 $dbname = "arcadia_zoo";
 
-// Créer une connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Vérifier la connexion
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Ajouter un service
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['service-title'])) {
     $title = $_POST['service-title'];
     $description = $_POST['service-description'];
@@ -20,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['service-title'])) {
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($image);
 
-    // Déplacer le fichier téléchargé vers le répertoire cible
     if (move_uploaded_file($_FILES['service-image']['tmp_name'], $target_file)) {
         $sql = "INSERT INTO services (title, description, image) VALUES ('$title', '$description', '$image')";
         if ($conn->query($sql) === TRUE) {
@@ -33,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['service-title'])) {
     }
 }
 
-// Supprimer un service
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete-service'])) {
     $service_id = $_POST['service-id'];
     $sql = "DELETE FROM services WHERE id='$service_id'";
