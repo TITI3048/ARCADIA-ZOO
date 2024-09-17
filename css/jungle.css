@@ -57,7 +57,7 @@ margin-bottom: 20px;
 margin-left: auto;
 margin-right: auto;
 background: linear-gradient(to left , #f9fbb5, #34ae71b8);
-width: 81%;
+width: 82%;
 height: 700px;
 text-align: center;
 font-family: 'Montserrat', sans-serif;
@@ -391,6 +391,7 @@ ul.active {
     .text {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        width: 100%;
         height: auto;
     }
 
@@ -400,19 +401,19 @@ ul.active {
     }
 
     #board {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         grid-template-rows: auto;
         gap: 10px;
     }
 
     .container {
-        width: 100%;
+        width: auto;
         height: auto;
     }
 
     .card {
-        width: 100%;
-        height: auto;
+        width: 400px;
+        height: 600px;
     }
 
     .card .image, .card .image1 {
@@ -421,13 +422,25 @@ ul.active {
     }
 
     .box .icons {
-        width: 100%;
-        justify-content: space-around;
+        width: 70px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        background: #fff;
+        border-radius: 5px;
+        border: solid #000 3px;
+    }
+
+    .icons .like {
+        width: 30px;
+        border-right: #000 solid 2px;
+        pointer-events: none;
+        margin-right: 5px;
     }
 
     .like-button {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 
     .like-count {
