@@ -21,9 +21,7 @@
             <li><a href="connexion.php">Connexion</a></li>
         </ul>
     </header>
-    <main id="main-page">
-
-    </main>
+    
     <footer>
         <p class="contener">&copy; 2024 Arcadia Zoo Forêt de Broceliande</p>
         <img src="/image/image footer/icon-facebook.png" class="logo" alt="facebook">
@@ -31,8 +29,6 @@
         <img src="/image/image footer/icon-x.png" class="logo" alt="x">
         <img src="/image/image footer/icon-whatsapp.jpg" class="logo" alt="whatsapp">
     </footer>
-    <script src="/js/accueil.js"></script>
-
 </body>
 
 </html>
