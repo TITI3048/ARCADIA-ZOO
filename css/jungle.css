@@ -383,142 +383,54 @@ footer {
     
 }
 
-/* Responsive styles */
-@media screen and (max-width: 1200px) {
+ul.active {
+    left: 0;
+}
+
+@media screen and (max-width: 768px) {
     .text {
-        width: 90%;
-        height: auto;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-    }
-
-    .texte0, .texte1, .texte2 {
-        width: 100%;
-        height: auto;
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .jungle, .jungle1, .jungle3 {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .image {
-        width: 200px;
         height: auto;
     }
 
-    .button {
-        margin-top: 10px;
-    }
-
-    ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .text {
+    .texte0, .texte1, .texte2, .jungle, .jungle1, .jungle3 {
         width: 100%;
-        padding: 10px;
+        height: auto;
     }
 
-}
-
-@media screen and (max-width: 768px) {
     #board {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
     }
 
     .container {
-        width: auto;
-        max-width: 450px; 
+        width: 100%;
         height: auto;
-        margin-bottom: 20px;
     }
 
     .card {
-        width: auto;
-        height: auto;
-        margin-bottom: auto;
-    }
-
-    .card .image, .card .image1 {
-        width: auto;
-        height: auto;
-    }
-
-    .box .icons {
-        width: auto;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #board {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container {
-        width: auto;
-        max-width: 350px; 
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .card {
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
     .card .image, .card .image1 {
-        width:auto;
+        width: 100%;
         height: auto;
     }
 
     .box .icons {
-        width: auto;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h2, h3, h4 {
-        font-size: 24px;
+        width: 100%;
+        justify-content: space-around;
     }
 
-    p {
-        font-size: 16px;
+    .like-button {
+        width: 20px;
+        height: 20px;
     }
 
-    .button {
-        width: 40px;
-        height: 40px;
-    }
-
-    .button::after, .button::before {
-        width: 30px;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .logo {
-        width: 40px;
-        height: 40px;
+    .like-count {
+        font-size: 14px;
     }
 }

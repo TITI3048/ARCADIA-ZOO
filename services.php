@@ -1,3 +1,50 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "arcadia_zoo";
+
+// Créer une connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Ajouter un service
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['service-title'])) {
+    $title = $_POST['service-title'];
+    $description = $_POST['service-description'];
+    $image = $_FILES['service-image']['name'];
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($image);
+
+    // Déplacer le fichier téléchargé vers le répertoire cible
+    if (move_uploaded_file($_FILES['service-image']['tmp_name'], $target_file)) {
+        $sql = "INSERT INTO services (title, description, image) VALUES ('$title', '$description', '$image')";
+        if ($conn->query($sql) === TRUE) {
+            echo "New service added successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
+
+// Supprimer un service
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete-service'])) {
+    $service_id = $_POST['service-id'];
+    $sql = "DELETE FROM services WHERE id='$service_id'";
+    if ($conn->query($sql) === TRUE) {
+        echo "Service deleted successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -77,17 +124,6 @@
             <h2>Services Actuels</h2>
             <div class="row">
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "arcadia_zoo";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
                 $sql = "SELECT id, title, description, image, reg_date FROM services";
                 $result = $conn->query($sql);
 
@@ -114,5 +150,9 @@
             </div>
         </section>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

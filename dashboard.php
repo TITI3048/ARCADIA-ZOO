@@ -5,6 +5,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: connexion.php");
     exit();
 }
+
 $servername = "localhost";
 $db_username = "root";
 $db_password = "";
@@ -15,28 +16,36 @@ $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 if ($conn->connect_error) {
     die("Échec de la connexion : " . $conn->connect_error);
 }
-$query = 'SELECT nom, habitat, espece, likes FROM animaux ORDER BY likes DESC LIMIT 5';
 
-$result = $conn->query($query);
+$query = 'SELECT nom, habitat, espece, likes FROM animaux ORDER BY likes DESC LIMIT 5';
+$stmt = $conn->prepare($query);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if (!$result) {
     die("Erreur dans la requête : " . $conn->error);
 }
 
 $query_top3 = 'SELECT nom, likes FROM animaux ORDER BY likes DESC LIMIT 3';
-$result_top3 = $conn->query($query_top3);
+$stmt_top3 = $conn->prepare($query_top3);
+$stmt_top3->execute();
+$result_top3 = $stmt_top3->get_result();
 
 $animaux = [];
 $likes = [];
 
 if ($result_top3->num_rows > 0) {
-    while($row = $result_top3->fetch_assoc()) {
+    while ($row = $result_top3->fetch_assoc()) {
         $animaux[] = $row['nom'];
         $likes[] = $row['likes'];
     }
 } else {
     echo "0 results";
 }
+
+$stmt->close();
+$stmt_top3->close();
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +62,7 @@ if ($result_top3->num_rows > 0) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/fr.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
 </head>
 <style>
     body {
@@ -217,7 +227,3 @@ if ($result_top3->num_rows > 0) {
 </body>
 
 </html>
-
-<?php
-$conn->close();
-?>
