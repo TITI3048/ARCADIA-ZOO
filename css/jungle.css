@@ -383,14 +383,11 @@ footer {
     
 }
 
-ul.active {
-    left: 0;
-}
 
 @media screen and (max-width: 768px) {
     .text {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
         width: 100%;
         height: auto;
     }

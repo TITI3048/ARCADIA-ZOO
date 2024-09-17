@@ -63,7 +63,7 @@ p {
     background: -moz-linear-gradient(to left, #f9fbb5, #34ae71b8); 
     background: -o-linear-gradient(to left, #f9fbb5, #34ae71b8); 
     background: linear-gradient(to left, #f9fbb5, #34ae71b8); 
-    width: 81%;
+    width: 82%;
     height: 700px;
     text-align: center;
     font-weight: 500;
@@ -130,7 +130,7 @@ p {
 h2 {
     font-size: 40px;
     font-weight: bold;
-    color: #000000;
+    color: #000;
     text-align: center;
     font-family: "Comic sans ms", sans-serif;
     padding-top: 20px;
@@ -148,9 +148,11 @@ h4 {
 }
 
 h3 {
-    margin-top: 0px;
-    padding-bottom: 0px;
+    font-size: 30px;
     font-family: "Comic sans ms", sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
 }
 
 main {
@@ -185,7 +187,7 @@ main {
 }
 
 .card {
-    background: #fae675a4;
+    background: #34ae71a4;
     height: 700px;
     width: 450px;
     position: relative;
@@ -243,7 +245,7 @@ main {
 }
 
 
-.card img {
+.card image {
     width: 450px;
     height: 400px;
     border-radius: 25px;
@@ -393,4 +395,66 @@ footer {
         left :0 ;
     }
     
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .texte0, .texte1, .texte2, .reserve, .reserve1, .reserve3 {
+        width: 100%;
+        height: auto;
+    }
+
+    #board {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .container {
+        width: auto;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        width: 400px;
+        height: 600px;
+    }
+
+    .card .image, .card .image1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .box .icons {
+        width: 70px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        background: #fff;
+        border-radius: 5px;
+        border: solid #000 3px;
+    }
+
+    .icons .like {
+        width: 30px;
+        border-right: #000 solid 2px;
+        pointer-events: none;
+        margin-right: 5px;
+    }
+
+    .like-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .like-count {
+        font-size: 14px;
+    }
 }
