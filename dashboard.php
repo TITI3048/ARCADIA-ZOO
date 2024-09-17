@@ -15,7 +15,7 @@ $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 if ($conn->connect_error) {
     die("Échec de la connexion : " . $conn->connect_error);
 }
-$query = 'SELECT nom, habitat, espece, likes FROM animaux ORDER BY likes DESC LIMIT 10';
+$query = 'SELECT nom, habitat, espece, likes FROM animaux ORDER BY likes DESC LIMIT 5';
 
 $result = $conn->query($query);
 
@@ -52,6 +52,7 @@ if ($result_top3->num_rows > 0) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/fr.js"></script>
 </head>
 <style>
     body {
@@ -103,7 +104,7 @@ if ($result_top3->num_rows > 0) {
     </nav>
     <div class="container content">
         <div class="container mb-5">
-            <h1 class="mt-5">Top 10 des animaux les plus aimés</h1>
+            <h1 class="mt-5">Top 5 des animaux les plus aimés</h1>
             <table class="table table-striped mt-3">
                 <thead>
                     <tr>
@@ -140,12 +141,31 @@ if ($result_top3->num_rows > 0) {
     <script>
         $(document).ready(function() {
             $('#calendar').fullCalendar({
+                locale: 'fr',
                 header: {
                     left: 'prev,next today',
                     center: 'title',
                     right: 'month,agendaWeek,agendaDay'
                 },
                 editable: true,
+                selectable: true,
+                selectHelper: true,
+                select: function(start, end) {
+                    var title = prompt('Titre de l\'événement:');
+                    var eventData;
+                    if (title) {
+                        eventData = {
+                            title: title,
+                            start: start,
+                            end: end
+                        };
+                        $('#calendar').fullCalendar('renderEvent', eventData, true);
+                    }
+                    $('#calendar').fullCalendar('unselect');
+                },
+                eventClick: function(event) {
+                    alert('Événement: ' + event.title + '\nDébut: ' + event.start.format('DD/MM/YYYY HH:mm') + '\nFin: ' + (event.end ? event.end.format('DD/MM/YYYY HH:mm') : 'N/A'));
+                },
                 events: [
                 ]
             });
@@ -176,6 +196,21 @@ if ($result_top3->num_rows > 0) {
                     }
                 }
             });
+
+            function sendReminder(event) {
+                var now = moment();
+                var eventStart = moment(event.start);
+                if (eventStart.diff(now, 'days') === 1) {
+                    alert('Rappel: Vous avez un événement demain - ' + event.title);
+                }
+            }
+
+            setInterval(function() {
+                var events = $('#calendar').fullCalendar('clientEvents');
+                events.forEach(function(event) {
+                    sendReminder(event);
+                });
+            }, 60000);
         });
     </script>
 </body>

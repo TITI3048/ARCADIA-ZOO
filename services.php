@@ -80,8 +80,8 @@
                 // Connexion à la base de données
                 $servername = "localhost";
                 $username = "root";
-                $password = "[Sensitive Parameter]";
-                $dbname = "arcadia-zoo";
+                $password = "";
+                $dbname = "arcadia_zoo";
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 

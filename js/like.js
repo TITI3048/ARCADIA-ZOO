@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             storedLikes[cardId] = likeCount;
             localStorage.setItem('likes', JSON.stringify(storedLikes));
 
-            fetch('/update_likes.php', { // Assurez-vous que le chemin est correct
+            fetch('/update_likes.php', { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
