@@ -72,11 +72,18 @@ $result = $conn->query($sql);
         background-color: #2980b9 ;
     }
 
+    .content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     .container {
         background-color: #f8f9fa;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        margin-bottom: 20px
     }
 </style>
 

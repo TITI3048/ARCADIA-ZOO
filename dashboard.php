@@ -68,6 +68,7 @@ if ($result_top3->num_rows > 0) {
 
     .content {
         margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .chart-container {
