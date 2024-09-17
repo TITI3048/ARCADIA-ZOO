@@ -77,7 +77,6 @@
             <h2>Services Actuels</h2>
             <div class="row">
                 <?php
-                // Connexion à la base de données
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -85,17 +84,14 @@
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                // Vérifier la connexion
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                // Requête pour récupérer les services
                 $sql = "SELECT id, title, description, image, reg_date FROM services";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Afficher les services
                     while($row = $result->fetch_assoc()) {
                         echo "<div class='col-md-4'>";
                         echo "<div class='card mb-4 shadow-sm'>";
