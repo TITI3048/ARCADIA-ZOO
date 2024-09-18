@@ -1,4 +1,4 @@
-/* Style de base pour le corps de la page */
+
 body {
     font-family: 'Arial', sans-serif;
     background: url(/image/illustration-nature-motifs-feuilles-conception-plantes-abstraites-ia-generative_188544-12678.jpg);
@@ -12,7 +12,7 @@ body {
     height: 100vh;
 }
 
-/* Conteneur pour le formulaire de connexion */
+
 .login-container {
     background-color: #fff;
     padding: 20px;
@@ -24,14 +24,14 @@ body {
     border-radius: 15px;
 }
 
-/* Style pour les labels */
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-/* Style pour les champs de saisie */
+
 input[type="text"],
 input[type="password"] {
     width: 100%;
@@ -42,7 +42,7 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-/* Style pour le bouton de soumission */
+
 button {
     width: 100%;
     padding: 10px;
@@ -59,7 +59,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Style pour les liens */
+
 .lien {
     text-align: center;
     margin-top: 20px;
@@ -75,7 +75,7 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Style pour les messages d'erreur */
+
 .error {
     color: red;
     margin-bottom: 15px;

@@ -34,6 +34,69 @@ function executeQuery($conn, $sql, $params)
     return $stmt->get_result();
 }
 
+// Traitement des inscriptions
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['valider'])) {
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $validate_password = $_POST['validate_password'];
+
+    // Vérifier si les mots de passe correspondent
+    if ($password !== $validate_password) {
+        echo "Les mots de passe ne correspondent pas.";
+        exit;
+    }
+
+    // Vérifier si l'utilisateur existe déjà
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "Adresse email déjà utilisée.";
+    } else {
+        // Insérer le nouvel utilisateur avec status 'pending'
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users (nom, prenom, email, password, status) VALUES (?, ?, ?, ?, 'pending')";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ssss', $nom, $prenom, $email, $hashed_password);
+        if ($stmt->execute()) {
+            echo "Inscription en attente de validation.";
+        } else {
+            echo "Erreur lors de l'inscription.";
+        }
+    }
+
+    $stmt->close();
+}
+
+// Validation ou refus des inscriptions
+if (isset($_POST['approve_user'])) {
+    $user_id = $_POST['user_id'];
+    $sql = "UPDATE users SET status = 'approved' WHERE id = ?";
+    executeQuery($conn, $sql, ['i', $user_id]);
+
+    // Ajouter l'utilisateur approuvé aux employés
+    $sql = "INSERT INTO employes (nom, prenom, email, poste) SELECT nom, prenom, email, 'Employé' FROM users WHERE id = ?";
+    executeQuery($conn, $sql, ['i', $user_id]);
+
+    header("Location: employes.php");
+    exit();
+}
+
+if (isset($_POST['reject_user'])) {
+    $user_id = $_POST['user_id'];
+    $sql = "DELETE FROM users WHERE id = ?";
+    executeQuery($conn, $sql, ['i', $user_id]);
+
+    header("Location: employes.php");
+    exit();
+}
+
+// Traitement des employés
 if (isset($_POST['add_employe'])) {
     $nom = $_POST['employe_name'];
     $prenom = $_POST['employe_firstname'];
@@ -55,6 +118,9 @@ if (isset($_POST['delete_employe'])) {
 
 $sql = "SELECT id, nom, prenom, email, poste FROM employes";
 $result = $conn->query($sql);
+
+$sql_pending = "SELECT id, nom, prenom, email FROM users WHERE status = 'pending'";
+$result_pending = $conn->query($sql_pending);
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +135,7 @@ $result = $conn->query($sql);
 
 <style>
     body {
-        background-color: #2980b9 ;
+        background-color: #2980b9;
     }
 
     .content {
@@ -83,7 +149,7 @@ $result = $conn->query($sql);
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         margin-top: 20px;
-        margin-bottom: 20px
+        margin-bottom: 20px;
     }
 </style>
 
@@ -108,7 +174,7 @@ $result = $conn->query($sql);
                     <a class="nav-link" href="connexion.php">Déconnexion</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="accueil.html">Retour au Site</a>
+                    <a class="nav-link" href="accueil.html">Retour au Site</a>
                 </li>
             </ul>
         </div>
@@ -172,6 +238,45 @@ $result = $conn->query($sql);
                     }
                 } else {
                     echo "<tr><td colspan='5'>Aucun employé trouvé</td></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+
+        <h1 class="mt-5">Inscriptions en attente</h1>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                if ($result_pending->num_rows > 0) {
+                    while ($row = $result_pending->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row["id"] . "</td>";
+                        echo "<td>" . $row["nom"] . "</td>";
+                        echo "<td>" . $row["prenom"] . "</td>";
+                        echo "<td>" . $row["email"] . "</td>";
+                        echo "<td>
+                                <form method='post' action='employes.php' style='display:inline;'>
+                                    <input type='hidden' name='user_id' value='" . $row["id"] . "'>
+                                    <button type='submit' class='btn btn-success' name='approve_user'>Valider</button>
+                                </form>
+                                <form method='post' action='employes.php' style='display:inline;'>
+                                    <input type='hidden' name='user_id' value='" . $row["id"] . "'>
+                                    <button type='submit' class='btn btn-danger' name='reject_user'>Refuser</button>
+                                </form>
+                                </td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>Aucune inscription en attente</td></tr>";
                 }
                 ?>
             </tbody>

@@ -1,0 +1,123 @@
+<?php
+$servername = "localhost";
+$db_username = "root";
+$db_password = "";
+$dbname = "arcadia_zoo";
+
+$conn = new mysqli($servername, $db_username, $db_password, $dbname);
+
+if ($conn->connect_error) {
+    die("Échec de la connexion : " . $conn->connect_error);
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['inscrire'])) {
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $validate_password = $_POST['validate_password'];
+
+    if ($password !== $validate_password) {
+        echo "<div class='alert alert-danger'>Les mots de passe ne correspondent pas.</div>";
+        exit;
+    }
+
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "<div class='alert alert-danger'>Adresse email déjà utilisée.</div>";
+    } else {
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users (nom, prenom, email, password, status) VALUES (?, ?, ?, ?, 'pending')";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ssss', $nom, $prenom, $email, $hashed_password);
+        if ($stmt->execute()) {
+            echo "<div class='alert alert-success'>Inscription en attente de validation.</div>";
+        } else {
+            echo "<div class='alert alert-danger'>Erreur lors de l'inscription.</div>";
+        }
+    }
+
+    $stmt->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url(/image/illustration-nature-motifs-feuilles-conception-plantes-abstraites-ia-generative_188544-12678.jpg);
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .lien {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .lien a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .lien a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Inscription</h1>
+        <form method="post" action="inscription.php">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="validate_password">Confirmer le mot de passe :</label>
+                <input type="password" class="form-control" id="validate_password" name="validate_password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" name="inscrire">S'inscrire</button>
+        </form>
+        <div class="lien">
+            <a href="accueil.html">Retour à l'accueil</a>
+        </div>
+    </div>
+</body>
+
+</html>

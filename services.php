@@ -11,33 +11,46 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['service-title'])) {
-    $title = $_POST['service-title'];
-    $description = $_POST['service-description'];
+    $title = $conn->real_escape_string($_POST['service-title']);
+    $description = $conn->real_escape_string($_POST['service-description']);
     $image = $_FILES['service-image']['name'];
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($image);
+    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    if (move_uploaded_file($_FILES['service-image']['tmp_name'], $target_file)) {
-        $sql = "INSERT INTO services (title, description, image) VALUES ('$title', '$description', '$image')";
-        if ($conn->query($sql) === TRUE) {
-            echo "New service added successfully";
+    // Vérifiez si le fichier est une image réelle
+    $check = getimagesize($_FILES['service-image']['tmp_name']);
+    if ($check !== false) {
+        if (move_uploaded_file($_FILES['service-image']['tmp_name'], $target_file)) {
+            $stmt = $conn->prepare("INSERT INTO services (title, description, image) VALUES (?, ?, ?)");
+            $stmt->bind_param("sss", $title, $description, $image);
+            if ($stmt->execute()) {
+                echo "New service added successfully";
+            } else {
+                echo "Error: " . $stmt->error;
+            }
+            $stmt->close();
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Sorry, there was an error uploading your file.";
         }
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        echo "File is not an image.";
     }
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete-service'])) {
-    $service_id = $_POST['service-id'];
-    $sql = "DELETE FROM services WHERE id='$service_id'";
-    if ($conn->query($sql) === TRUE) {
+    $service_id = $conn->real_escape_string($_POST['service-id']);
+    $stmt = $conn->prepare("DELETE FROM services WHERE id=?");
+    $stmt->bind_param("i", $service_id);
+    if ($stmt->execute()) {
         echo "Service deleted successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+    $stmt->close();
 }
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -118,30 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete-service'])) {
         <section class="current-services">
             <h2>Services Actuels</h2>
             <div class="row">
-                <?php
-                $sql = "SELECT id, title, description, image, reg_date FROM services";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo "<div class='col-md-4'>";
-                        echo "<div class='card mb-4 shadow-sm'>";
-                        echo "<img src='uploads/" . $row['image'] . "' class='card-img-top' alt='" . $row['title'] . "'>";
-                        echo "<div class='card-body'>";
-                        echo "<h5 class='card-title'>" . $row['title'] . "</h5>";
-                        echo "<p class='card-text'>" . $row['description'] . "</p>";
-                        echo "<p class='card-text'><small class='text-muted'>ID: " . $row['id'] . "</small></p>";
-                        echo "<p class='card-text'><small class='text-muted'>Date: " . $row['reg_date'] . "</small></p>";
-                        echo "</div>";
-                        echo "</div>";
-                        echo "</div>";
-                    }
-                } else {
-                    echo "<div class='col-12'><div class='alert alert-info'>Aucun service trouvé.</div></div>";
-                }
-
-                $conn->close();
-                ?>
+                
             </div>
         </section>
     </main>
