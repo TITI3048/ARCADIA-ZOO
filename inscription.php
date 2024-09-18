@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $db_username = "root";
-$db_password = "Admin-/*159@";
+$db_password = "";
 $dbname = "arcadia_zoo";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
