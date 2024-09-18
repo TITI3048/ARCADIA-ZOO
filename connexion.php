@@ -3,7 +3,7 @@ session_start();
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Admin-/*159@";
 $dbname = "arcadia_zoo";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
