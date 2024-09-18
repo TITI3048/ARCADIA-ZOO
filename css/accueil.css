@@ -312,6 +312,11 @@ h3 {
     margin-left: 20px;
 }
 
+.plan {
+    width: auto;
+    height: 750px;
+}
+
 .modale {
     visibility: hidden;
     opacity: 0;
