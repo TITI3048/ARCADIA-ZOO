@@ -57,6 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['inscrire'])) {
     <style>
         body {
             background: url(/image/illustration-nature-motifs-feuilles-conception-plantes-abstraites-ia-generative_188544-12678.jpg);
+            background-size: cover;
+            background-position: center;
         }
         .container {
             max-width: 600px;
@@ -92,25 +94,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['inscrire'])) {
     <div class="container">
         <h1 class="text-center">Inscription</h1>
         <form method="post" action="inscription.php">
-            <div class="form-group">
-                <label for="nom">Nom :</label>
-                <input type="text" class="form-control" id="nom" name="nom" required>
-            </div>
-            <div class="form-group">
-                <label for="prenom">Prénom :</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" required>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nom">Nom :</label>
+                    <input type="text" class="form-control" id="nom" name="nom" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" class="form-control" id="prenom" name="prenom" required>
+                </div>
             </div>
             <div class="form-group">
                 <label for="email">Email :</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
-            <div class="form-group">
-                <label for="password">Mot de passe :</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="validate_password">Confirmer le mot de passe :</label>
-                <input type="password" class="form-control" id="validate_password" name="validate_password" required>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="validate_password">Confirmer le mot de passe :</label>
+                    <input type="password" class="form-control" id="validate_password" name="validate_password" required>
+                </div>
             </div>
             <button type="submit" class="btn btn-primary btn-block" name="inscrire">S'inscrire</button>
         </form>
