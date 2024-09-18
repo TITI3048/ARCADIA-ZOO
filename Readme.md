@@ -117,7 +117,7 @@ Exécutez la suite de tests à l’aide de la commande suivante :
 # Contribuer
 Les contributions sont les bienvenues ! Voici plusieurs façons de contribuer :
 
-Signaler des problèmes : Soumettez les bogues trouvés ou enregistrez les demandes de fonctionnalités pour leARCADIA-ZOOprojet.
+Signaler des problèmes : Soumettez les bog trouvés ou enregistrez les demandes de fonctionnalités pour leARCADIA-ZOOprojet.
 Soumettre des demandes d'extraction : examinez les demandes d'extraction ouvertes et soumettez vos propres demandes d'extraction.
 Rejoignez les discussions : partagez vos idées, donnez votre avis ou posez des questions.
 Lignes directrices pour les contributions
