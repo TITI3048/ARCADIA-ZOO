@@ -1,20 +1,17 @@
 {
-  "name": "arcadia_zoo",
+  "name": "arcadia-zoo",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "chai": "^5.1.1",
-    "mocha": "^10.7.3",
-    "supertest": "^7.0.0"
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "supertest": "^6.1.6"
   }
 }
