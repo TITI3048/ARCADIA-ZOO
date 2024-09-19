@@ -18,13 +18,13 @@ function showSlides(n) {
     if(n < 1 ) { slideIndex = slides.length }
     
     // Cacher toutes les slides
-    for(let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    for(const element of slides) {
+        element.style.display = "none";
     }
     
     // Retirer "active" de tous les points
-    for(let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
+    for(const element of dots) {
+        element.classList.remove('active');
     }
     
     // Afficher la slide demandée
