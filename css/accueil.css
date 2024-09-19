@@ -134,10 +134,19 @@ h4 {
     height: auto;
     margin: auto;
     position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
 }
 
 .slides {
     display: none;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
 }
 
 .prev,
@@ -161,6 +170,13 @@ h4 {
 .prev:hover,
 .next:hover {
     background: rgba(0, 0, 0, .8);
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px;
 }
 
 .dot {
@@ -392,8 +408,8 @@ footer {
         justify-content: center;
         background-color: rgba(255, 255, 255, 0.8);
         transition: 0.5s;
+        -webkit-backdrop-filter: blur(10px); 
         backdrop-filter: blur(10px);
-        
     }
     ul li {
         margin: 20px 0;
