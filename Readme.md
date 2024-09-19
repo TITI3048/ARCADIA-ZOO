@@ -1,5 +1,6 @@
 #  ARCADIA ZOO 
  site de mon zoo
+ acceder au site: http://localhost:3000/accueil.html
 
 #  Table des matières
 Aperçu
@@ -16,10 +17,10 @@ Contribuer
 Licence
 Remerciements
 # Aperçu
-❯ REPLACE-ME
+
 
 # Caractéristiques
-❯ REPLACE-ME
+
 
 # Structure du référentiel
 └── ARCADIA-ZOO/
@@ -86,7 +87,7 @@ css
 js
 # Commencer
 Prérequis
-JavaScript :version x.y.z
+
 
 # Installation
 Construire le projet à partir de la source :
@@ -111,21 +112,15 @@ Exécutez la suite de tests à l’aide de la commande suivante :
 ❯ npm test
 
 # Feuille de route du projet
- Task 1: Implémenter la fonctionnalité 1.
- Task 2:Implémenter la fonctionnalité deux.
- Task 3:Implémenter la fonctionnalité trois.
+
 
 # Contribuer
 Les contributions sont les bienvenues ! Voici plusieurs façons de contribuer :
 
-Signaler des problèmes : Soumettez les bog trouvés ou enregistrez les demandes de fonctionnalités pour leARCADIA-ZOOprojet.
+Signaler des problèmes : Soumettez les bug trouvés ou enregistrez les demandes de fonctionnalités pour ARCADIA-ZOO.
 Soumettre des demandes d'extraction : examinez les demandes d'extraction ouvertes et soumettez vos propres demandes d'extraction.
 Rejoignez les discussions : partagez vos idées, donnez votre avis ou posez des questions.
 Lignes directrices pour les contributions
 Graphique des contributeurs
 
 # Licence
-Ce projet est protégé par la licence SELECT-A-LICENSE . Pour plus de détails, consultez le fichier LICENSE .
-
-Remerciements
-Énumérez ici toutes les ressources, contributeurs, sources d’inspiration, etc.
