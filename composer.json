@@ -1,8 +1,0 @@
-{
-    "require-dev": {
-        "symfony/test-pack": "^1.1"
-    },
-    "require": {
-        "nelmio/api-doc-bundle": "^4.30"
-    }
-}
