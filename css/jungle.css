@@ -99,6 +99,7 @@ p {
 .jungle3 {
     grid-column: 2/3;
     grid-row: 2/3;
+    height: 400px;
 }
 
 h2 {
