@@ -13,8 +13,14 @@ if ($conn->connect_error) {
     die("Échec de la connexion : " . $conn->connect_error);
 }
 
-// Votre code existant
+// Définir la requête SQL
+$query = 'VOTRE_REQUETE_SQL'; // Remplacez par votre requête SQL réelle
+
+// Préparer et exécuter la requête
 $stmt = $conn->prepare($query);
+if (!$stmt) {
+    die("Erreur dans la préparation de la requête : " . $conn->error);
+}
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -22,8 +28,12 @@ if (!$result) {
     die("Erreur dans la requête : " . $conn->error);
 }
 
+// Requête pour obtenir les 3 animaux les plus likés
 $query_top3 = 'SELECT nom, likes FROM animaux ORDER BY likes DESC LIMIT 3';
 $stmt_top3 = $conn->prepare($query_top3);
+if (!$stmt_top3) {
+    die("Erreur dans la préparation de la requête top3 : " . $conn->error);
+}
 $stmt_top3->execute();
 $result_top3 = $stmt_top3->get_result();
 
