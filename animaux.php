@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "admin";
-$password = "";
-$dbname = "arcadia_zoo"; 
+$servername = "mysql-tibzooarcadia.alwaysdata.net";
+$username = "376784";
+$password = "Joyce3048.";
+$dbname = "tibzooarcadia_zoo"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -10,15 +10,10 @@ if ($conn->connect_error) {
     die("Connexion échouée: " . $conn->connect_error);
 }
 
-$sql = "CREATE DATABASE IF NOT EXISTS arcadia_zoo"; 
-if ($conn->query($sql) === TRUE) {
-    echo "Base de données créée avec succès ou déjà existante.";
-} else {
-    die("Erreur lors de la création de la base de données: " . $conn->error);
-}
+// Utiliser la base de données existante
+$conn->select_db($dbname); 
 
-$conn->select_db("arcadia_zoo"); 
-
+// Créer la table animaux si elle n'existe pas déjà
 $sql = "CREATE TABLE IF NOT EXISTS animaux (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(30) NOT NULL,
@@ -26,7 +21,12 @@ $sql = "CREATE TABLE IF NOT EXISTS animaux (
     espece VARCHAR(30) NOT NULL,
     likes INT(6) NOT NULL DEFAULT 0
 )";
-$conn->query($sql);
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table animaux créée avec succès ou déjà existante.";
+} else {
+    die("Erreur lors de la création de la table: " . $conn->error);
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['nom'])) {
     $nom = $conn->real_escape_string($_POST['nom']);
