@@ -122,5 +122,5 @@ test executé avec:
 ❯ npm test
 
 # Remerciement
-Je remerci tous mon group watshapp  pour leur aide et leur soutien.
-surtout Julien LE NIR CAROLE MIKA Eugenio.
+Je remerci mon groupe watshapp pour leurs aides et leurs soutiens.
+Surtout Julien LE NIR Carole Mika Eugenio.
