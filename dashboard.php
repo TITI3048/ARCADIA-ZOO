@@ -1,23 +1,19 @@
 <?php
-session_start();
+// Définir les variables de connexion à la base de données
+$db_host = 'mysql-tibzooarcadia.alwaysdata.net';
+$db_username = 'votre_nom_utilisateur';
+$db_password = 'votre_mot_de_passe';
+$db_name = 'tibzooarcadia_zoo';
 
-if (!isset($_SESSION['username'])) {
-    header("Location: connexion.php");
-    exit();
-}
+// Créer une connexion à la base de données
+$conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 
-$servername = "mysql-tibzooarcadia.alwaysdata.net";
-$username = "376784";
-$password = "Joyce3048.";
-$dbname = "tibzooarcadia_zoo";
-
-$conn = new mysqli($servername, $db_username, $db_password, $dbname);
-
+// Vérifier la connexion
 if ($conn->connect_error) {
     die("Échec de la connexion : " . $conn->connect_error);
 }
 
-$query = 'SELECT nom, habitat, espece, likes FROM animaux ORDER BY likes DESC LIMIT 5';
+// Votre code existant
 $stmt = $conn->prepare($query);
 $stmt->execute();
 $result = $stmt->get_result();
