@@ -1,27 +1,30 @@
 <?php
 $servername = "mysql-tibzooarcadia.alwaysdata.net";
-$username = "376784";
-$password = "Joyce3048.";
+$db_username = "376784"; // Remplacez par votre nom d'utilisateur réel
+$db_password = "Joyce3048."; // Remplacez par votre mot de passe réel
 $dbname = "tibzooarcadia_zoo";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
 if ($conn->connect_error) {
-    die("Échec de la connexion : " . $conn->connect_error);
+    die("Connexion échouée: " . $conn->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['inscrire'])) {
+// Traitement des inscriptions
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['valider'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $validate_password = $_POST['validate_password'];
 
+    // Vérifier si les mots de passe correspondent
     if ($password !== $validate_password) {
-        echo "<div class='alert alert-danger'>Les mots de passe ne correspondent pas.</div>";
+        echo "Les mots de passe ne correspondent pas.";
         exit;
     }
 
+    // Vérifier si l'utilisateur existe déjà
     $sql = "SELECT * FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $email);
@@ -29,21 +32,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['inscrire'])) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "<div class='alert alert-danger'>Adresse email déjà utilisée.</div>";
+        echo "Adresse email déjà utilisée.";
     } else {
+        // Insérer le nouvel utilisateur avec status 'pending'
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (nom, prenom, email, password, status) VALUES (?, ?, ?, ?, 'pending')";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param('ssss', $nom, $prenom, $email, $hashed_password);
         if ($stmt->execute()) {
-            echo "<div class='alert alert-success'>Inscription en attente de validation.</div>";
+            echo "Inscription en attente de validation.";
         } else {
-            echo "<div class='alert alert-danger'>Erreur lors de l'inscription.</div>";
+            echo "Erreur lors de l'inscription.";
         }
     }
 
     $stmt->close();
 }
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
