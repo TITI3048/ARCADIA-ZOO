@@ -29,6 +29,11 @@ Pour installer et exécuter ce projet localement, suivez les étapes ci-dessous 
 4. Assurez-vous que PHP est installé et configuré sur votre serveur.
 5. Importez la base de données fournie dans le fichier `database.sql`.
 
+# Deploiment
+j'ai deployé mon site sur alwaysdata, suivre le liens si dessous:
+
+https://tibzooarcadia.alwaysdata.net/accueil.html
+
 ## Utilisation
 
 - La page d'accueil (`accueil.html`) contient des liens vers différentes sections du zoo :
