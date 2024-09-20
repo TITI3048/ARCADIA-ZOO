@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$servername = "localhost";
-$username = "admin";
-$password = "";
-$dbname = "arcadia_zoo";
+$servername = "mysql-tibzooarcadia.alwaysdata.net";
+$username = "376784";
+$password = "Joyce3048.";
+$dbname = "tibzooarcadia_zoo";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

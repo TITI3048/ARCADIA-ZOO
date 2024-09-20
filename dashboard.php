@@ -6,10 +6,10 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-$servername = "localhost";
-$db_username = "admin";
-$db_password = "";
-$dbname = "arcadia_zoo";
+$servername = "mysql-tibzooarcadia.alwaysdata.net";
+$username = "376784";
+$password = "Joyce3048.";
+$dbname = "tibzooarcadia_zoo";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
