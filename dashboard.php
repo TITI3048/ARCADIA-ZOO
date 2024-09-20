@@ -1,8 +1,8 @@
 <?php
 // Définir les variables de connexion à la base de données
 $db_host = 'mysql-tibzooarcadia.alwaysdata.net';
-$db_username = 'votre_nom_utilisateur';
-$db_password = 'votre_mot_de_passe';
+$db_username = '376784';
+$db_password = 'Joyce3048.';
 $db_name = 'tibzooarcadia_zoo';
 
 // Créer une connexion à la base de données
