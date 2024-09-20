@@ -7,8 +7,8 @@ if (!isset($_SESSION['username'])) {
 }
 
 $servername = "mysql-tibzooarcadia.alwaysdata.net";
-$username = "376784";
-$password = "Joyce3048.";
+$db_username = "376784"; 
+$db_password = "Joyce3048."; 
 $dbname = "tibzooarcadia_zoo";
 
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
@@ -34,7 +34,6 @@ function executeQuery($conn, $sql, $params)
     return $stmt->get_result();
 }
 
-// Traitement des inscriptions
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['valider'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -42,13 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['valider'])) {
     $password = $_POST['password'];
     $validate_password = $_POST['validate_password'];
 
-    // Vérifier si les mots de passe correspondent
     if ($password !== $validate_password) {
         echo "Les mots de passe ne correspondent pas.";
         exit;
     }
 
-    // Vérifier si l'utilisateur existe déjà
     $sql = "SELECT * FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $email);
@@ -58,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['valider'])) {
     if ($result->num_rows > 0) {
         echo "Adresse email déjà utilisée.";
     } else {
-        // Insérer le nouvel utilisateur avec status 'pending'
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $sql = "INSERT INTO users (nom, prenom, email, password, status) VALUES (?, ?, ?, ?, 'pending')";
         $stmt = $conn->prepare($sql);
@@ -73,13 +69,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['valider'])) {
     $stmt->close();
 }
 
-// Validation ou refus des inscriptions
 if (isset($_POST['approve_user'])) {
     $user_id = $_POST['user_id'];
     $sql = "UPDATE users SET status = 'approved' WHERE id = ?";
     executeQuery($conn, $sql, ['i', $user_id]);
 
-    // Ajouter l'utilisateur approuvé aux employés
     $sql = "INSERT INTO employes (nom, prenom, email, poste) SELECT nom, prenom, email, 'Employé' FROM users WHERE id = ?";
     executeQuery($conn, $sql, ['i', $user_id]);
 
@@ -96,7 +90,6 @@ if (isset($_POST['reject_user'])) {
     exit();
 }
 
-// Traitement des employés
 if (isset($_POST['add_employe'])) {
     $nom = $_POST['employe_name'];
     $prenom = $_POST['employe_firstname'];

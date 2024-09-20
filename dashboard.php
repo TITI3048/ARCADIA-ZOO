@@ -1,22 +1,21 @@
 <?php
-// Définir les variables de connexion à la base de données
-$db_host = 'mysql-tibzooarcadia.alwaysdata.net';
-$db_username = '376784';
-$db_password = 'Joyce3048.';
-$db_name = 'tibzooarcadia_zoo';
+session_start();
 
-// Créer une connexion à la base de données
-$conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 
-// Vérifier la connexion
+$servername = "mysql-tibzooarcadia.alwaysdata.net";
+$username = "376784";
+$password = "Joyce3048.";
+$dbname = "tibzooarcadia_zoo";
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
 if ($conn->connect_error) {
-    die("Échec de la connexion : " . $conn->connect_error);
+    die("La connexion a échoué: " . $conn->connect_error);
 }
 
-// Définir la requête SQL
-$query = 'VOTRE_REQUETE_SQL'; // Remplacez par votre requête SQL réelle
+$query = 'SELECT * FROM animaux'; 
 
-// Préparer et exécuter la requête
 $stmt = $conn->prepare($query);
 if (!$stmt) {
     die("Erreur dans la préparation de la requête : " . $conn->error);
@@ -28,7 +27,6 @@ if (!$result) {
     die("Erreur dans la requête : " . $conn->error);
 }
 
-// Requête pour obtenir les 3 animaux les plus likés
 $query_top3 = 'SELECT nom, likes FROM animaux ORDER BY likes DESC LIMIT 3';
 $stmt_top3 = $conn->prepare($query_top3);
 if (!$stmt_top3) {
