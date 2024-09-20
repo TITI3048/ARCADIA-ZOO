@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background: url(/image/image-voliere/beau-paysage-ciel-dans-style-art-numerique_23-2151120844.avif);
+    background: url(/image/illustration-nature-motifs-feuilles-conception-plantes-abstraites-ia-generative_188544-12678.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -150,7 +150,6 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Montserrat';
         padding-bottom: 50px;
     }
     
