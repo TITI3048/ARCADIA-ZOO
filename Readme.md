@@ -52,7 +52,7 @@ https://tibzooarcadia.alwaysdata.net/accueil.html
 
 ## Contact
 
-Pour toute question ou suggestion, veuillez contacter [rouvierethibaudpro@ga=mail.com].
+Pour toute question ou suggestion, veuillez contacter [rouvierethibaudpro@gmail.com].
 
 ## Fonctionnalités supplémentaires
 
